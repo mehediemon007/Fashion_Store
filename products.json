@@ -1,0 +1,64 @@
+{
+    "data" : [
+        {
+            "name" : "Unstitched Digital Print Cotton",
+            "slug" : "unstitched-digital-print-cotton ",
+            "thumbnail" : "/uploads/products/1.jpg",
+            "pictures" : [
+                "/uploads/products/1.jpg",
+                "/uploads/products/1.jpg",
+                "/uploads/products/1.jpg",
+                "/uploads/products/1.jpg"
+            ],
+            "price": 550,
+            "discount" : 5,
+            "discount_type" : "Percentage",
+            "colors" : ["red","green","blue"]
+        },
+        {
+            "name" : "Unstitched Digital Print Cotton",
+            "slug" : "unstitched-digital-print-cotton ",
+            "thumbnail" : "/uploads/products/1.jpg",
+            "pictures" : [
+                "/uploads/products/1.jpg",
+                "/uploads/products/1.jpg",
+                "/uploads/products/1.jpg",
+                "/uploads/products/1.jpg"
+            ],
+            "price": 550,
+            "discount" : 5,
+            "discount_type" : "Percentage",
+            "colors" : ["red","green","blue"]
+        },
+        {
+            "name" : "Unstitched Digital Print Cotton",
+            "slug" : "unstitched-digital-print-cotton ",
+            "thumbnail" : "/uploads/products/1.jpg",
+            "pictures" : [
+                "/uploads/products/1.jpg",
+                "/uploads/products/1.jpg",
+                "/uploads/products/1.jpg",
+                "/uploads/products/1.jpg"
+            ],
+            "price": 550,
+            "discount" : 5,
+            "discount_type" : "Percentage",
+            "colors" : ["red","green","blue"]
+        },
+        {
+            "name" : "Unstitched Digital Print Cotton",
+            "slug" : "unstitched-digital-print-cotton ",
+            "thumbnail" : "/uploads/products/1.jpg",
+            "pictures" : [
+                "/uploads/products/1.jpg",
+                "/uploads/products/1.jpg",
+                "/uploads/products/1.jpg",
+                "/uploads/products/1.jpg"
+            ],
+            "price": 550,
+            "discount" : 5,
+            "discount_type" : "Percentage",
+            "colors" : ["red","green","blue"]
+        }
+    ]
+}
