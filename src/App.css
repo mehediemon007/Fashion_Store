@@ -19,7 +19,7 @@
   --direction: ltr;
 
   /* Typography */
-  --body-font: 'Roboto', sans-serif;
+  --body-font: 'Poppins', sans-serif;
   --title-font: 'Roboto', sans-serif;
   --font-weight-small:300;
   --font-weight-normal: 400;
@@ -329,6 +329,7 @@ label{
 .main-nav{
   display: grid;
   grid-template-columns: 200px 1fr 300px;
+  align-items: center;
 }
 
 .fs-main-nav.sticky{
@@ -507,4 +508,31 @@ label{
   border-radius: 5px;
   font-size: 0.9rem;
   transition: 0.3s;
+}
+
+/* Nav Menu */
+
+.product-navigation{
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.category-span{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .90rem;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--body-font);
+}
+
+.category-span i{
+  font-size: 1.4rem;
+}
+
+/* Hero Banner */
+
+.fs-banner .slick-slide img{
+  width: 100%;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Mainnav from './Mainnav'
+import Navmenu from './Navmenu'
 import Toolbar from './Toolbar'
 
 const Header = () => {
@@ -7,6 +8,7 @@ const Header = () => {
         <>
             <Toolbar/>
             <Mainnav/>
+            <Navmenu/>
         </>
     )
 }
