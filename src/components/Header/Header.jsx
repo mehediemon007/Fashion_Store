@@ -6,9 +6,11 @@ import Toolbar from './Toolbar'
 const Header = () => {
     return (
         <>
-            <Toolbar/>
-            <Mainnav/>
-            <Navmenu/>
+            <header className="fs-header">
+                <Toolbar/>
+                <Mainnav/>
+                <Navmenu/>
+            </header>
         </>
     )
 }
