@@ -1,0 +1,23 @@
+@media only screen and (min-width: 992px){
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-search {
+        position: relative;
+        margin: 0 24px;
+    }
+
+    .nav-search-btn {
+        position: absolute;
+        width: 45px;
+        height: 100%;
+        top: 0;
+        right: 10px;
+        font-size: 18px;
+        color: var(--white-color);
+        background-color: var(--primary-color);
+        border-radius: 0 5px 5px 0;
+    }
+}
