@@ -93,7 +93,7 @@ const Mainnav = () => {
                                     </div>
                                 </div>
                                 <div className="nav-user">
-                                    <i><i class="fa-solid fa-user"></i></i> My Account
+                                    <i><i className="fa-solid fa-user"></i></i> My Account
                                 </div>
                             </div>
                         </div>

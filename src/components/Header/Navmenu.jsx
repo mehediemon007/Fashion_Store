@@ -10,7 +10,7 @@ const Navmenu = () => {
                 <div className="container">
                     <div className="product-navigation">
                         <div className="fs-categories-nav show">
-                            <div className="category-span"><i class="fa-solid fa-bars"></i> CATEGORIES</div>
+                            <div className="category-span"><i className="fa-solid fa-bars"></i> CATEGORIES</div>
                         </div>
                         <div className="fs-product-menu">
                             <Link to="#flash-deals">FLASH DEALS</Link>

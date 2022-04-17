@@ -5,7 +5,9 @@ import {Link} from "react-router-dom"
 const Heroslider = () => {
 
     const settings = {
-        dots: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
         infinite: true,
         speed: 500,
         slidesToShow: 1,

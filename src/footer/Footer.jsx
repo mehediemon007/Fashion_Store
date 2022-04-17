@@ -14,10 +14,10 @@ const Footer = () => {
                             <div className="footer-widget footer-about">
                                 <a href="#"><h4 className='mb-4'>Fashion Store</h4></a>
                                 <ul className="contact-list">
-                                    <li><i class="fa-solid fa-map-location"></i> <span>San Luis Potosí, Centro Historico, 78000 San Luis Potosí, SPL, Mexico</span></li>
-                                    <li><i class="fa-solid fa-headset"></i> <a href='tel:019893234567'>+880-19893234567</a></li>
-                                    <li><i class="fa-solid fa-envelope"></i> <a href='mailto:Contact@Wpthemego.Com'>Contact@Wpthemego.Com</a></li>
-                                    <li><i class="fa-solid fa-clock-rotate-left"></i> <span>San Luis Potosí, Centro Historico, 78000 San Luis Potosí, SPL, Mexico</span></li>
+                                    <li><i className="fa-solid fa-map-location"></i> <span>San Luis Potosí, Centro Historico, 78000 San Luis Potosí, SPL, Mexico</span></li>
+                                    <li><i className="fa-solid fa-headset"></i> <a href='tel:019893234567'>+880-19893234567</a></li>
+                                    <li><i className="fa-solid fa-envelope"></i> <a href='mailto:Contact@Wpthemego.Com'>Contact@Wpthemego.Com</a></li>
+                                    <li><i className="fa-solid fa-clock-rotate-left"></i> <span>San Luis Potosí, Centro Historico, 78000 San Luis Potosí, SPL, Mexico</span></li>
                                 </ul>
                             </div>
                         </div>
