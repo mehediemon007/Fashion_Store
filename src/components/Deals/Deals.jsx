@@ -16,8 +16,8 @@ const Deals = () => {
                     <div className="deal-products">
                         <div className="row">
                             {products.filter(product => product.tag === 'sale').map(product => (
-                                <div className="col-6">
-                                    <DealProduct product={product} key={product.id}/>
+                                <div className="col-6" key={product.id}>
+                                    <DealProduct product={product}/>
                                 </div>
                             ))}
                         </div>
