@@ -680,6 +680,16 @@ label{
   font-weight: var(--font-weight-normal);
 }
 
+.product-content .product-name{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height:auto;
+  font-weight: var(--font-weight-normal);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .single-product .product-image{
   overflow: hidden;
 }
@@ -700,6 +710,31 @@ label{
 .product-image:hover .image2{
   opacity: 1;
   transform: translateX(0);
+}
+
+/* Popular Products */
+
+.popular-products-tab .tab-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.tab-menu .menu-link{
+  width: max-content;
+  height: 35px;
+  padding: 0 16px;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  outline: none;
+  border-radius: 4px;
+}
+
+.popular-products .single-product .thumbs-img{
+  position: relative;
+  margin:8px 0 -8px;
 }
 
 /* Newsletter */

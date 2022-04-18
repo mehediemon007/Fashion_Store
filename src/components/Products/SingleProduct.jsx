@@ -1,14 +1,14 @@
-import React,{useState, useEffect, useRef} from 'react';
+import React,{useState, useRef} from 'react';
 import {Link} from "react-router-dom"
 
 const SigngleProduct = (props) => {
 
     const product = props.value;
 
-    const [selectedThumb, setThumb] = useState(product.images[1]);
     const [previewImg , setPreviewImg] = useState(product.thumbnail);
+    const [selectedThumb, setThumb] = useState(product.images[1]);
 
-    const thumbImg = useRef([]);
+    const thumbImg = useRef([])
 
     const handleThumbImage = (img,index) =>{
         
@@ -20,6 +20,7 @@ const SigngleProduct = (props) => {
                 el.classList.remove("active");
             }
         })
+
         thumbImg.current[index].classList.add("active")
     }
 
@@ -30,7 +31,7 @@ const SigngleProduct = (props) => {
                     <Link to="/product-details"><img src={`images/products/${previewImg}`} alt={product.alt} className="image1"/></Link>
                     <Link to="/product-details"><img src={`images/products/${selectedThumb}`} alt={product.alt} className="image2"/></Link>
                     <div className="thumbs-img">
-                        {product.images.map((img,index)=> <img src={`images/products/${img}`} alt={product.name} key={index} onClick={()=>handleThumbImage(img,index)} ref={el => thumbImg.current[index] = el}/>)}
+                        {product.images.map((img,index)=> <img src={`images/products/${img}`} alt={product.name} key={index} onClick={()=>handleThumbImage(img,index)} ref={el => thumbImg.current.push(el)}/>)}
                     </div>
                 </div>
                 <div className="product-content">
@@ -41,7 +42,7 @@ const SigngleProduct = (props) => {
                         <span><i className="fa-solid fa-star"></i></span>
                         <span><i className="fa-solid fa-star"></i></span>
                     </div>
-                    <h5>{product.name}</h5>
+                    <h5 className='product-name'>{product.name}</h5>
                     <p className='price'>&#2547; {product.price}</p>
                 </div>
             </div>
