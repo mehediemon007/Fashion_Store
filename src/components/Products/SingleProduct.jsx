@@ -8,20 +8,29 @@ const SigngleProduct = (props) => {
     const [previewImg , setPreviewImg] = useState(product.thumbnail);
     const [selectedThumb, setThumb] = useState(product.images[1]);
 
-    const thumbImg = useRef([])
+    // const thumbImg = useRef([])
+    const thumbImg = []
 
     const handleThumbImage = (img,index) =>{
         
         setPreviewImg(img);
         setThumb(img);
-        thumbImg.current.forEach(el=>{
+        // thumbImg.current.forEach(el=>{
+
+        //     if(el.classList.contains("active")){
+        //         el.classList.remove("active");
+        //     }
+        // })
+
+        thumbImg.forEach(el=>{
 
             if(el.classList.contains("active")){
                 el.classList.remove("active");
             }
         })
 
-        thumbImg.current[index].classList.add("active")
+        // thumbImg.current[index].classList.add("active")
+        thumbImg[index].classList.add("active")
     }
 
     return (
@@ -31,7 +40,7 @@ const SigngleProduct = (props) => {
                     <Link to="/product-details"><img src={`images/products/${previewImg}`} alt={product.alt} className="image1"/></Link>
                     <Link to="/product-details"><img src={`images/products/${selectedThumb}`} alt={product.alt} className="image2"/></Link>
                     <div className="thumbs-img">
-                        {product.images.map((img,index)=> <img src={`images/products/${img}`} alt={product.name} key={index} onClick={()=>handleThumbImage(img,index)} ref={el => thumbImg.current.push(el)}/>)}
+                        {product.images.map((img,index)=> <img src={`images/products/${img}`} alt={product.name} key={index} onClick={()=>handleThumbImage(img,index)} ref={el => thumbImg.push(el)}/>)}
                     </div>
                 </div>
                 <div className="product-content">
