@@ -85,11 +85,11 @@ export const data = {
             discountType: "Percentage",
         },
         {   id:5,
-            thumbnail:"blue-shirt.jpg",
-            slug:"blue-shirt",
-            alt:"blue-shirt",
+            thumbnail:"check-shirt.jpg",
+            slug:"check-shirt",
+            alt:"check-shirt",
             images:[
-                "blue-shirt.jpg","sky-blue.jpg","light-blue.jpg"
+                "check-shirt.jpg","sweet-check-shirt.jpg",
             ],
             name: "Premium Cotton Blue Solid Half Shirt",
             des: "Style Code Live is a daily, live show where style enthusiasts can connect, chat, shop.",
@@ -117,11 +117,11 @@ export const data = {
             discountType: "Percentage",
         },
         {   id:7,
-            thumbnail:"blue-shirt.jpg",
-            slug:"blue-shirt",
-            alt:"blue-shirt",
+            thumbnail:"sweet-check-shirt.jpg",
+            slug:"sweet-check-shirt",
+            alt:"sweet-check-shirt",
             images:[
-                "blue-shirt.jpg","sky-blue.jpg","light-blue.jpg"
+                "sweet-check-shirt.jpg","light-check-shirt.jpg",
             ],
             name: "Premium Cotton Blue Solid Half Shirt",
             des: "Style Code Live is a daily, live show where style enthusiasts can connect, chat, shop.",
