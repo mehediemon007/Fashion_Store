@@ -1,7 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { useCountdown } from './useCountDown';
 
 const DealProduct = ({product}) => {
+
+    const [days, hours, minutes, seconds] = useCountdown(product.targetDate);
 
     return (
         <>
@@ -12,7 +15,7 @@ const DealProduct = ({product}) => {
                 </div>
                 <div className="product-content p-3">
                     <Link to="/product-details"><h5>{product.name}</h5></Link>
-                    <p className='price'>{product.price - ( product.price * product.discount ) / 100 } <del>{product.price}</del></p>
+                    <p className='price'>&#2547; {product.price - ( product.price * product.discount ) / 100 }<del>&#2547; {product.price}</del></p>
                     <p className='p-des'>{product.des}</p>
                     <div className="sale-count">
                         <div className="count-left">
@@ -20,7 +23,22 @@ const DealProduct = ({product}) => {
                             <p>Deal Ends In</p>
                         </div>
                         <div className="sale-counter">
-
+                            <div className="single-counter">
+                                <p className='count-num'>{days}</p>
+                                <p>Days</p>
+                            </div>
+                            <div className="single-counter">
+                                <p className='count-num'>{hours}</p>
+                                <p>Hours</p>
+                            </div>
+                            <div className="single-counter">
+                                <p className='count-num'>{minutes}</p>
+                                <p>Minutes</p>
+                            </div>
+                            <div className="single-counter">
+                                <p className='count-num'>{seconds}</p>
+                                <p>Seconds</p>
+                            </div>
                         </div>
                     </div>
                 </div>
