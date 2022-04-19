@@ -285,7 +285,7 @@ export const data = {
             discountType: "Percentage",
         },
         {   id:17,
-            thumbnail:"white-set-gold.jpg",
+            thumbnail:"white-gold-set.jpg",
             slug:"white-set-gold",
             alt:"white-set-gold",
             images:[

@@ -690,7 +690,8 @@ label{
   text-overflow: ellipsis;
 }
 
-.single-product .product-image{
+.single-product .product-image-wpr{
+  position: relative;
   overflow: hidden;
 }
 
