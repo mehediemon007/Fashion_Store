@@ -18,7 +18,7 @@ const DealProduct = ({product}) => {
                     <p className='price'>&#2547; {product.price - ( product.price * product.discount ) / 100 }<del>&#2547; {product.price}</del></p>
                     <div className="sale-count">
                         <div className="count-left">
-                            <h4> Hurry Up!</h4>
+                            <h4><img src="images/alarm-clock.png" alt='clock'/> Hurry Up!</h4>
                             <p>Deal Ends In</p>
                         </div>
                         <div className="sale-counter">

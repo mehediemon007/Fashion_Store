@@ -56,8 +56,13 @@ const SigngleProduct = (props) => {
                         <img src={`images/products/${selectedThumb}`} alt={product.alt} className="image2"/>
                     </Link>
                     <div className="thumbs-img">
-                    {product.images.map((img,index)=> <img src={`images/products/${img}`} alt={product.name} key={index} onClick={()=>handleThumbImage(img,index)} ref={el => thumbImg.push(el)}/>)}
-                </div>
+                        {product.images.map((img,index)=> <img src={`images/products/${img}`} alt={product.name} key={index} onClick={()=>handleThumbImage(img,index)} ref={el => thumbImg.push(el)}/>)}
+                    </div>
+                    <div className="action-btns">
+                        <a className='action-btn'><i class="fa-solid fa-eye"></i></a>
+                        <a className='action-btn'><i class="fa-solid fa-heart"></i></a>
+                        <a className='action-btn'><i class="fa-solid fa-shuffle"></i></a>
+                    </div>
                 </div>
                 <div className="product-content">
                     <div className="product-ratings">
@@ -69,6 +74,7 @@ const SigngleProduct = (props) => {
                     </div>
                     <h5 className='product-name'>{product.name}</h5>
                     <p className='price'>&#2547; {product.price}</p>
+                    <a className='add-cart-btn action-btn'><i class="fa-solid fa-bag-shopping"></i></a>
                 </div>
             </div>
         </>

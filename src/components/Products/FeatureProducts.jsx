@@ -21,9 +21,9 @@ import Slider from "react-slick";
 
         return (
             <>
-                <div className="fs-feature-products mb-50">
+                <div className="fs-feature-products">
                     <div className="container">
-                        <div className="sec-heading text-center mb-5">
+                        <div className="sec-heading text-center">
                             <h3 className='mb-2'>Featured Products</h3>
                             <p>Check and Get Your Desired Products</p>
                         </div>

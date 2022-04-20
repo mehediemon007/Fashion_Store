@@ -6,17 +6,30 @@ const PopularProducts = () => {
 
     const [popularProducts , setCategory ] = useState([]);
 
-    function filterProducts(category="fashion"){
+    const menuLinks = [];
+
+    function filterProducts(category,e){
+
+        menuLinks.forEach(el=>{
+
+            if(el.classList.contains("active")){
+                el.classList.remove("active");
+            }
+        })
+
+        e.target.classList.add("active")
 
         let products = data.products.filter(product => product.category === category);
 
         setCategory(products)
 
     }
-    
-    useEffect(()=>{
 
-        filterProducts();
+    useEffect((category='fashion')=>{
+
+        let products = data.products.filter(product => product.category === category);
+
+        setCategory(products)
 
     },[])
 
@@ -29,9 +42,9 @@ const PopularProducts = () => {
                     </div>
                     <div className="popular-products-tab">
                         <div className="tab-menu">
-                            <button className='menu-link' onClick={()=> filterProducts('fashion')}>Fashion</button>
-                            <button className='menu-link' onClick={()=> filterProducts('cosmetic')}>Cosmetic</button>
-                            <button className='menu-link' onClick={()=> filterProducts('jewellary')}>Jewellary</button>
+                            <button className='menu-link active' onClick={(e)=> filterProducts('fashion',e)} ref={el => menuLinks.push(el)}>Fashion</button>
+                            <button className='menu-link' onClick={(e)=> filterProducts('cosmetic',e)} ref={el => menuLinks.push(el)}>Cosmetic</button>
+                            <button className='menu-link' onClick={(e)=> filterProducts('jewellary',e)} ref={el => menuLinks.push(el)}>Jewellary</button>
                         </div>
                         <div className="tab-content popular-products">
                             <div className="row">

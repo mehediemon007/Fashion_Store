@@ -582,6 +582,8 @@ label{
   display: grid;
   grid-template-columns: 40% 60%;
   margin-bottom: 28px;
+  border: 0;
+  box-shadow: 0 0 4px rgb(0 0 0 / 10%);
 }
 
 .single-product .price{
@@ -644,8 +646,18 @@ label{
 
 /* Featured Products */
 
+.feature-products .slick-list{
+  padding: 50px 0;
+}
+
 .feature-products .slick-slide {
   padding: 0 10px;
+}
+
+.single-product{
+  box-shadow: 0 0 14px rgb(0 0 0 / 10%);
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .thumbs-img{
@@ -665,8 +677,50 @@ label{
   opacity: 1;
 }
 
+.single-product .action-btns{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .25s cubic-bezier(.02,.01,.47,1);
+}
+
+.single-product:hover .action-btns{
+  opacity: 1;
+  visibility: visible;
+}
+
+.action-btn{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  color: var(--white-color);
+  background-color: rgba(235,85,37,0.7);
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  text-align: center;
+  line-height: 35px;
+  margin: 0 2px;
+  transition: background-color var(--transition) ease;
+  cursor: pointer;
+}
+
+.action-btn:hover{
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.add-cart-btn{
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
+
 .single-product .product-content{
-  padding: 16px 0;
+  position: relative;
+  padding-top: 16px;
 }
 
 .product-ratings span{
@@ -706,7 +760,7 @@ label{
   left: 0;
   opacity: 0;
   transform: translateX(-100px);
-  transition: all .5s ease;
+  transition: all .5s cubic-bezier(0,0,.2,1);
 }
 
 .product-image:hover .image2{
@@ -728,10 +782,16 @@ label{
   width: max-content;
   height: 35px;
   padding: 0 16px;
+  color: var(--primary-color);
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+.tab-menu .menu-link.active{
   color: var(--white-color);
   background-color: var(--primary-color);
-  outline: none;
-  border-radius: 4px;
 }
 
 .popular-products .single-product .thumbs-img{
