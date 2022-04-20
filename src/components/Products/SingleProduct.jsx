@@ -52,11 +52,11 @@ const SigngleProduct = (props) => {
             <div className="single-product">
                 <div className="product-image-wpr">
                     <Link to="/product-details" className='product-image'>
-                        <img src={`images/products/${previewImg}`} alt={product.alt} className="image1"/>
-                        <img src={`images/products/${selectedThumb}`} alt={product.alt} className="image2"/>
+                        <img src={`/images/products/${previewImg}`} alt={product.alt} className="image1"/>
+                        <img src={`/images/products/${selectedThumb}`} alt={product.alt} className="image2"/>
                     </Link>
                     <div className="thumbs-img">
-                        {product.images.map((img,index)=> <img src={`images/products/${img}`} alt={product.name} key={index} onClick={()=>handleThumbImage(img,index)} ref={el => thumbImg.push(el)}/>)}
+                        {product.images.map((img,index)=> <img src={`/images/products/${img}`} alt={product.name} key={index} onClick={()=>handleThumbImage(img,index)} ref={el => thumbImg.push(el)}/>)}
                     </div>
                     <div className="action-btns">
                         <Link to="" className='action-btn'><i className="fa-solid fa-eye"></i></Link>

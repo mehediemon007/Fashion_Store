@@ -659,9 +659,10 @@ label{
   box-shadow: 0 0 14px rgb(0 0 0 / 10%);
   border-radius: 5px;
   padding: 10px;
+  margin-bottom: 24px;
 }
 
-.thumbs-img{
+.feature-products .thumbs-img{
   position: absolute;
   bottom: 5px;
   left: 5px;
@@ -794,7 +795,7 @@ label{
   background-color: var(--primary-color);
 }
 
-.popular-products .single-product .thumbs-img{
+.thumbs-img{
   position: relative;
   margin:8px 0 -8px;
 }
@@ -852,6 +853,44 @@ label{
   position: absolute;
   content:"|";
   right: -10px;
+}
+
+/* Pagination */
+
+.fs-pagination li{
+  display: inline-block;
+}
+
+.fs-pagination .page-link{
+  display: block;
+  width: 40px;
+  height: 40px;
+  color: var(--dark-color);
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  text-align: center;
+  line-height: 28px;
+  border-radius: 4px;
+  margin-right: 8px;
+  outline: none;
+}
+
+.fs-pagination .page-link:hover{
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.fs-pagination li:first-child .page-link,
+.fs-pagination li:last-child .page-link{
+  border: none;
+}
+
+.fs-pagination li:first-child .page-link:hover{
+  border-radius: 30% 4px 4px 30%;
+}
+
+.fs-pagination li:last-child .page-link:hover{
+  border-radius: 4px 30% 30% 4px;
 }
 
 /* Footer */

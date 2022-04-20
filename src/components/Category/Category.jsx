@@ -10,7 +10,7 @@ const Category = () => {
         },
         {
             image:"grocery.png",
-            name:"Health & Beauty"
+            name:"Cosmetic"
         },
         {
             image:"grocery.png",
