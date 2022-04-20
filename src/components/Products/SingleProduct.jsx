@@ -59,9 +59,9 @@ const SigngleProduct = (props) => {
                         {product.images.map((img,index)=> <img src={`images/products/${img}`} alt={product.name} key={index} onClick={()=>handleThumbImage(img,index)} ref={el => thumbImg.push(el)}/>)}
                     </div>
                     <div className="action-btns">
-                        <a className='action-btn'><i class="fa-solid fa-eye"></i></a>
-                        <a className='action-btn'><i class="fa-solid fa-heart"></i></a>
-                        <a className='action-btn'><i class="fa-solid fa-shuffle"></i></a>
+                        <Link to="" className='action-btn'><i class="fa-solid fa-eye"></i></Link>
+                        <Link to="" className='action-btn'><i class="fa-solid fa-heart"></i></Link>
+                        <Link to="" className='action-btn'><i class="fa-solid fa-shuffle"></i></Link>
                     </div>
                 </div>
                 <div className="product-content">
@@ -72,9 +72,9 @@ const SigngleProduct = (props) => {
                         <span><i className="fa-solid fa-star"></i></span>
                         <span><i className="fa-solid fa-star"></i></span>
                     </div>
-                    <h5 className='product-name'>{product.name}</h5>
+                    <Link to="/product-details"><h5 className='product-name'>{product.name}</h5></Link>
                     <p className='price'>&#2547; {product.price}</p>
-                    <a className='add-cart-btn action-btn'><i class="fa-solid fa-bag-shopping"></i></a>
+                    <Link to="" className='add-cart-btn action-btn'><i class="fa-solid fa-bag-shopping"></i></Link>
                 </div>
             </div>
         </>
