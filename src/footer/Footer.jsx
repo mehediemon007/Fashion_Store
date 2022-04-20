@@ -12,7 +12,7 @@ const Footer = () => {
                         <div className="row justify-content-between">
                         <div className="col-3">
                             <div className="footer-widget footer-about">
-                                <a href="#"><h4 className='mb-4'>Fashion Store</h4></a>
+                                <Link to="/"><h4 className='mb-4'>Fashion Store</h4></Link>
                                 <ul className="contact-list">
                                     <li><i className="fa-solid fa-map-location"></i> <span>San Luis Potosí, Centro Historico, 78000 San Luis Potosí, SPL, Mexico</span></li>
                                     <li><i className="fa-solid fa-headset"></i> <a href='tel:019893234567'>+880-19893234567</a></li>
@@ -47,12 +47,12 @@ const Footer = () => {
                             <div className="footer-widget footer-gallery">
                                 <h5>Gallery</h5>
                                 <div className="insta-links">
-                                    <Link to=""><img src="images/category/men-insta.jpg" alt='insta' /></Link>
-                                    <Link to=""><img src="images/category/men-insta.jpg" alt='insta' /></Link>
-                                    <Link to=""><img src="images/category/men-insta.jpg" alt='insta' /></Link>
-                                    <Link to=""><img src="images/category/men-insta.jpg" alt='insta' /></Link>
-                                    <Link to=""><img src="images/category/men-insta.jpg" alt='insta' /></Link>
-                                    <Link to=""><img src="images/category/men-insta.jpg" alt='insta' /></Link>
+                                    <Link to=""><img src="/images/category/men-insta.jpg" alt='insta' /></Link>
+                                    <Link to=""><img src="/images/category/men-insta.jpg" alt='insta' /></Link>
+                                    <Link to=""><img src="/images/category/men-insta.jpg" alt='insta' /></Link>
+                                    <Link to=""><img src="/images/category/men-insta.jpg" alt='insta' /></Link>
+                                    <Link to=""><img src="/images/category/men-insta.jpg" alt='insta' /></Link>
+                                    <Link to=""><img src="/images/category/men-insta.jpg" alt='insta' /></Link>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +61,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-mid">
                     <div className="container">
-                        <Link to="/"><img src="images/category/payment.png" alt='payemnt'/></Link>
+                        <Link to="/"><img src="/images/category/payment.png" alt='payemnt'/></Link>
                     </div>
                 </div>
                 <div className="footer-bottom">

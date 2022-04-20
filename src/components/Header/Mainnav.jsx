@@ -26,7 +26,7 @@ const Mainnav = () => {
                         </div>
                         <div className="col-auto">
                             <div className="nav-right d-flex justify-content-between align-items-center">
-                                <div className='nav-icon'><Link to="#"><i className="fa-solid fa-bolt-lightning"></i></Link></div>
+                                <div className='nav-icon'><Link to="#"><span className='count'>0</span><i className="fa-solid fa-shuffle"></i></Link></div>
                                 <div className='nav-icon'><Link to="#"><span className='count'>0</span><i className="fas fa-heart"></i></Link></div>
                                 <div className="nav-cart shopping-cart nav-icon">
                                     <span className='count'>0</span>

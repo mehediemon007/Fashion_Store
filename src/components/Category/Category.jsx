@@ -64,7 +64,7 @@ const Category = () => {
                         </div>
                         <div className="category-list">
                             {catList.map((cat,index) =>(
-                                <Link to={`/${cat.name}`} className="single-cat" key={index}>
+                                <Link to={`/category/${cat.name.toLowerCase()}`} className="single-cat" key={index}>
                                     <div className="cat-image"><img src={`images/category/${cat.image}`} alt="category"/></div>
                                     <p className="cat-name">{cat.name}</p>
                                 </Link>
