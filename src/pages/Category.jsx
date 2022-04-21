@@ -4,6 +4,7 @@ import Footer from '../footer/Footer';
 import {data} from "../data/data";
 import { useParams } from 'react-router-dom';
 import CategoryProducts from '../components/Category/CategoryProducts';
+import CategoryWidget from '../components/widgets/CategoryWidget';
 
 const Category = () => {
 
@@ -63,7 +64,7 @@ const Category = () => {
                             </div>
                             <div className="col-3">
                                 <div className="fs-sidebar-widget">
-
+                                    <CategoryWidget/>
                                 </div>
                             </div>
                         </div>

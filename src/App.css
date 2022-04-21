@@ -878,7 +878,7 @@ label{
   background-color: #f7f8f9;
   border: 1px solid var(--primary-color);
   border-radius: 20px;
-  padding: 5px;
+  padding: 4px 8px;
 }
 
 .single-filter .form-select{
@@ -886,6 +886,39 @@ label{
   border: none;
   background-color: transparent;
   outline: none;
+}
+
+.single-widget{
+  border: 1px solid #e2e9e1;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.single-widget .widget-title{
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e2e9e1;
+}
+
+.single-widget .widget-title::before{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.widget-title h5{
+  font-weight: var(--font-weight-medium);
+}
+
+.categories li a{
+  display: block;
+  font-weight: var(--font-weight-normal);
+  margin: 4px 0;
 }
 
 /* Pagination */
