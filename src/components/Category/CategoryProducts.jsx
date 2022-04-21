@@ -14,10 +14,10 @@ const CategoryProducts = ({value: products}) => {
                         </div>
                     ))}
                     <ul className="fs-pagination my-4">
-                        <li><Link to="" className='page-link'><i class="fa-solid fa-angles-left"></i></Link></li>
+                        <li><Link to="" className='page-link'><i className="fa-solid fa-angles-left"></i></Link></li>
                         <li><Link to="" className='page-link'>1</Link></li>
                         <li><Link to="" className='page-link'>2</Link></li>
-                        <li><Link to="" className='page-link'><i class="fa-solid fa-angles-right"></i></Link></li>
+                        <li><Link to="" className='page-link'><i className="fa-solid fa-angles-right"></i></Link></li>
                     </ul>
                 </div>
             </div>

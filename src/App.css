@@ -855,6 +855,39 @@ label{
   right: -10px;
 }
 
+/* Category Products */
+
+.filter-toolbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px;
+}
+
+.filter-toolbar .filters{
+  display: flex;
+  gap: 16px;
+}
+
+.single-filter{
+  width: max-content;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f7f8f9;
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.single-filter .form-select{
+  width: max-content;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
 /* Pagination */
 
 .fs-pagination li{
