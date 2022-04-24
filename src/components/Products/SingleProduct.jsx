@@ -51,7 +51,7 @@ const SigngleProduct = (props) => {
         <>
             <div className="single-product">
                 <div className="product-image-wpr">
-                    <Link to="/product-details" className='product-image'>
+                    <Link to={`/product_details/${product.id}`} className='product-image'>
                         <img src={`/images/products/${previewImg}`} alt={product.alt} className="image1"/>
                         <img src={`/images/products/${selectedThumb}`} alt={product.alt} className="image2"/>
                     </Link>
@@ -72,7 +72,7 @@ const SigngleProduct = (props) => {
                         <span><i className="fa-solid fa-star"></i></span>
                         <span><i className="fa-solid fa-star"></i></span>
                     </div>
-                    <Link to="/product-details"><h5 className='product-name'>{product.name}</h5></Link>
+                    <Link to={`/product_details/${product.id}`}><h5 className='product-name'>{product.name}</h5></Link>
                     <p className='price'>&#2547; {product.price}</p>
                     <Link to="" className='add-cart-btn action-btn'><i className="fa-solid fa-bag-shopping"></i></Link>
                 </div>
