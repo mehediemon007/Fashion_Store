@@ -5,6 +5,7 @@ import {data} from "../data/data";
 import { useParams } from 'react-router-dom';
 import CategoryProducts from '../components/Category/CategoryProducts';
 import CategoryWidget from '../components/widgets/CategoryWidget';
+import FilterWidget from '../components/widgets/FilterWidget';
 
 const Category = () => {
 
@@ -65,6 +66,7 @@ const Category = () => {
                             <div className="col-3">
                                 <div className="fs-sidebar-widget">
                                     <CategoryWidget/>
+                                    <FilterWidget/>
                                 </div>
                             </div>
                         </div>
