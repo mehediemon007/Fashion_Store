@@ -1,4 +1,5 @@
 import React from 'react'
+import MultiRangeSlider from './MultirangeSlider';
 
 const FilterWidget = () => {
     return (
@@ -7,6 +8,7 @@ const FilterWidget = () => {
                 <div className="widget-title">
                     <h5>Filter</h5>
                 </div>
+                <MultiRangeSlider min={0} max={1000} onChange={({ min, max }) => null}/>
                 <div className="color-filter my-3">
                     <h6 className='mb-2'>Color</h6>
                     <ul>
