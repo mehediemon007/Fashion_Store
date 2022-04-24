@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import CategoryProducts from '../components/Category/CategoryProducts';
 import CategoryWidget from '../components/widgets/CategoryWidget';
 import FilterWidget from '../components/widgets/FilterWidget';
+import ProductWidget from '../components/widgets/ProductWidget';
 
 const Category = () => {
 
@@ -25,7 +26,7 @@ const Category = () => {
 
     //     setProducts(fetchProducts(categorySlug));
 
-    // },[]);
+    // },[categorySlug]);
 
     return (
         <>
@@ -67,6 +68,7 @@ const Category = () => {
                                 <div className="fs-sidebar-widget">
                                     <CategoryWidget/>
                                     <FilterWidget/>
+                                    <ProductWidget/>
                                 </div>
                             </div>
                         </div>

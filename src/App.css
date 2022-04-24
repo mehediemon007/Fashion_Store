@@ -962,6 +962,16 @@ label{
   background-color: var(--primary-color);
 }
 
+.widget-products .single-product{
+  padding: 0 5px;
+  margin-bottom: 10px;
+  box-shadow: none;
+}
+
+.widget-products .price{
+  font-size: .85rem;
+}
+
 /* Pagination */
 
 .fs-pagination li{
