@@ -13,7 +13,7 @@ const CategoryProducts = ({value: products}) => {
                             <SingleProduct value={product}/>
                         </div>
                     ))}
-                    <ul className="fs-pagination my-4">
+                    <ul className="fs-pagination mb-5">
                         <li><Link to="" className='page-link'><i className="fa-solid fa-angles-left"></i></Link></li>
                         <li><Link to="" className='page-link'>1</Link></li>
                         <li><Link to="" className='page-link'>2</Link></li>
