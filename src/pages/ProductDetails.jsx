@@ -11,6 +11,7 @@ import 'swiper/css/thumbs'
 import AdditionalInfo from '../components/Tabs/AdditionalInfo';
 import Reviews from '../components/Tabs/Reviews';
 import ProductDescription from '../components/Tabs/ProductDescription';
+import RelatedProducts from '../components/Products/RelatedProducts';
 
 const ProductDetails = () => {
 
@@ -101,6 +102,7 @@ const ProductDetails = () => {
                             </Tab>
                         </Tabs>
                     </div>
+                    <RelatedProducts/>
                 </div>
             </main>
             <Footer/>
