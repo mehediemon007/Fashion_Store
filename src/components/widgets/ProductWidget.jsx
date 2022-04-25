@@ -29,11 +29,11 @@ const ProductWidget = () => {
                                         <Link to="/product-details"><h6>{product.name}</h6></Link>
                                         <p className='price'>&#2547; {product.price}</p>
                                         <div className="product-ratings">
-                                            <span><i class="fa-solid fa-star"></i></span>
-                                            <span><i class="fa-solid fa-star"></i></span>
-                                            <span><i class="fa-solid fa-star"></i></span>
-                                            <span><i class="fa-solid fa-star"></i></span>
-                                            <span><i class="fa-solid fa-star"></i></span>
+                                            <span><i className="fa-solid fa-star"></i></span>
+                                            <span><i className="fa-solid fa-star"></i></span>
+                                            <span><i className="fa-solid fa-star"></i></span>
+                                            <span><i className="fa-solid fa-star"></i></span>
+                                            <span><i className="fa-solid fa-star"></i></span>
                                         </div>
                                     </div>
                                 </div>

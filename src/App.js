@@ -1,5 +1,6 @@
 import './App.css';
-import "./Responsive.css"
+import "./Responsive.css";
+import 'font-awesome/css/font-awesome.css';
 import Home from './pages/Home';
 import {BrowserRouter as Router} from "react-router-dom";
 import Routes from "./router/Router"
