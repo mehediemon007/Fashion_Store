@@ -16,7 +16,7 @@ const RelatedProducts = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         centerPadding: "0px",
-        swipe: false
+        swipe: true
     };
 
     return (
