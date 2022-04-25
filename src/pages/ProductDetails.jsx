@@ -4,9 +4,13 @@ import Footer from '../footer/Footer';
 import { useParams, Link } from 'react-router-dom';
 import { data } from '../data/data';
 import ProductSlider from '../components/Products/ProductSlider';
+import { Tabs, Tab } from "react-bootstrap";
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
+import AdditionalInfo from '../components/Tabs/AdditionalInfo';
+import Reviews from '../components/Tabs/Reviews';
+import ProductDescription from '../components/Tabs/ProductDescription';
 
 const ProductDetails = () => {
 
@@ -14,7 +18,9 @@ const ProductDetails = () => {
 
     const [productQty,setQty] = useState(1)
 
-    const product = data.products.find(product => product.id == product_id)
+    const product = data.products.find(product => product.id == product_id);
+
+    const [key, setKey] = useState("description");
 
     return (
         <>
@@ -74,13 +80,26 @@ const ProductDetails = () => {
                                     <p>Availability : <span style={{color:'MediumSeaGreen'}}>Items In Stock</span></p>
                                     <div className='product-share mt-4'>
                                         <span>Share this :</span>
-                                        <Link to=""><i class="fa-brands fa-facebook-f"></i></Link>
-                                        <Link to=""><i class="fa-brands fa-instagram"></i></Link>
-                                        <Link to=""><i class="fa-brands fa-twitter"></i></Link>
+                                        <Link to=""><i className="fa-brands fa-facebook-f"></i></Link>
+                                        <Link to=""><i className="fa-brands fa-instagram"></i></Link>
+                                        <Link to=""><i className="fa-brands fa-twitter"></i></Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className="fs-product-description mb-50">
+                        <Tabs className="tabs product-tab-links" id="controlled-tab-example" activeKey={key} onSelect={(k) => setKey(k)}>
+                            <Tab eventKey="description" title="DESCRIPTION" className='news-tab-content'>
+                                <ProductDescription/>
+                            </Tab>
+                            <Tab eventKey="info" title="ADDITIONAL INFO" className='info-tab-content'>
+                                <AdditionalInfo/>
+                            </Tab>
+                            <Tab eventKey="reviews" title="REVIEWS (3)" className='review-tab-content'>
+                                <Reviews/>
+                            </Tab>
+                        </Tabs>
                     </div>
                 </div>
             </main>
