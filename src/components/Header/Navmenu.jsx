@@ -1,7 +1,9 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from "react-router-dom"
 
 const Navmenu = () => {
+
+    const [navOpen, setOpen] = useState(false);
 
     return (
         <>
@@ -9,8 +11,16 @@ const Navmenu = () => {
                 <span className="nav-toggle text-end"><i className="fas fa-times"></i></span>
                 <div className="container">
                     <div className="product-navigation">
-                        <div className="fs-categories-nav show">
-                            <div className="category-span"><i className="fa-solid fa-bars"></i> CATEGORIES</div>
+                        <div className="fs-categories-nav">
+                            <div className="category-span"><span className='toggleIcon' onClick={()=> setOpen(!navOpen)}><i className="fa-solid fa-bars"></i></span> CATEGORIES</div>
+                            <div className={`sidebar-wpr ${navOpen ? 'show' : ''}`}>
+                                <div className="sidebar-menu">
+                                    <div className="menu-heading">
+                                        <Link to="/"><h5>Fashion Store</h5></Link>
+                                        <span className='toggleIcon' onClick={()=> setOpen(!navOpen)}><i class="fa-solid fa-xmark"></i></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div className="fs-product-menu">
                             <Link to="#flash-deals">FLASH DEALS</Link>
