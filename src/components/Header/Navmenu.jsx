@@ -17,7 +17,7 @@ const Navmenu = () => {
                                 <div className="sidebar-menu">
                                     <div className="menu-heading">
                                         <Link to="/"><h5>Fashion Store</h5></Link>
-                                        <span className='toggleIcon' onClick={()=> setOpen(!navOpen)}><i class="fa-solid fa-xmark"></i></span>
+                                        <span className='toggleIcon' onClick={()=> setOpen(!navOpen)}><i className="fa-solid fa-xmark"></i></span>
                                     </div>
                                 </div>
                             </div>

@@ -556,16 +556,13 @@ label{
 .sidebar-menu{
   width: 350px;
   height: 100%;
-  left: 0;
-  visibility: hidden;
-  opacity: 0;
   background-color: var(--white-color);
+  transform: translateX(-100%);
   transition: var(--transition) ease;
 }
 
 .sidebar-wpr.show .sidebar-menu{
-  visibility: visible;
-  opacity: 1;
+  transform: translateX(0);
 }
 
 .menu-heading{
@@ -614,6 +611,7 @@ label{
 
 .fs-category{
   background-color: rgba(235,85,37,0.15);
+  margin-top: -8px;
 }
 
 .category-list{

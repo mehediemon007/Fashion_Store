@@ -1,7 +1,11 @@
 import React,{useState, useRef, useEffect} from 'react';
+import {useDispatch} from 'react-redux';
 import {Link} from "react-router-dom"
+import { addToCart} from "../../redux/actions"
 
 const SigngleProduct = (props) => {
+
+    let dispatch = useDispatch();
 
     const product = props.value;
 
@@ -74,7 +78,7 @@ const SigngleProduct = (props) => {
                     </div>
                     <Link to={`/product_details/${product.id}`}><h5 className='product-name'>{product.name}</h5></Link>
                     <p className='price'>&#2547; {product.price}</p>
-                    <Link to="" className='add-cart-btn action-btn'><i className="fa-solid fa-bag-shopping"></i></Link>
+                    <Link to="" className='add-cart-btn action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToCart(product))}}><i className="fa-solid fa-bag-shopping"></i></Link>
                 </div>
             </div>
         </>
