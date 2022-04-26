@@ -1,7 +1,11 @@
 import React from 'react';
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import {useSelector} from 'react-redux'
 
 const Mainnav = () => {
+
+    const {cart} = useSelector(state => state.cart)
+
     return (
         <>
             <div className="fs-main-nav">
@@ -38,51 +42,23 @@ const Mainnav = () => {
                                                 <a href="shop-cart.html" className="view-cart">VIEW CART</a>
                                             </div>
                                             <ul className="cart-product-list">
-                                                <li className="cart-product-item">
-                                                    <div className="cart-product-image">
-                                                        <div className="product-inner">
-                                                            <a href="#" className="product-remove">&#xd7;</a>
-                                                            <img src="images/products/i-phone-sm.jpg" alt="I-phone"/>
+                                                {cart.map(item=>(
+                                                    <li className="cart-product-item">
+                                                        <div className="cart-product-image">
+                                                            <div className="product-inner">
+                                                                <span href="#" className="product-remove">&#xd7;</span>
+                                                                <img src={`/images/products/${item.thumbnail}`} alt={item.alt}/>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className="cart-product-details">
-                                                        <a href="product-details.html">I-phone 10</a>
-                                                        <div className="cart-product-quantity">
-                                                            <span>1 x </span>
-                                                            <span>$259</span>
+                                                        <div className="cart-product-details">
+                                                            <Link to={`/product_details/${item.id}`}>{item.name}</Link>
+                                                            <div className="cart-product-quantity">
+                                                                <span>{item.qty} x </span>
+                                                                <span>${item.price}</span>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </li>
-                                                <li className="cart-product-item">
-                                                    <div className="cart-product-image">
-                                                        <div className="product-inner">
-                                                            <a href="#" className="product-remove">&#xd7;</a>
-                                                            <img src="images/products/travel-bag-sm.jpg" alt="Travel Bag"/>
-                                                        </div>
-                                                    </div>
-                                                    <div className="cart-product-details">
-                                                        <a href="product-details.html">Sun Glass</a>
-                                                        <div className="cart-product-quantity">
-                                                            <span>1 x </span>
-                                                            <span>$259</span>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li className="cart-product-item">
-                                                    <div className="cart-product-image">
-                                                        <div className="product-inner">
-                                                            <a href="#" className="product-remove">&#xd7;</a>
-                                                            <img src="images/products/ladies-bag-sm.jpg" alt="Ladies Bag"/>
-                                                        </div>
-                                                    </div>
-                                                    <div className="cart-product-details">
-                                                        <a href="product-details.html">Ladies Bag</a>
-                                                        <div className="cart-product-quantity">
-                                                            <span>1 x </span>
-                                                            <span>$259</span>
-                                                        </div>
-                                                    </div>
-                                                </li>
+                                                    </li>
+                                                ))}
                                             </ul>
                                             <div className="sub-total">
                                                 <span>SUB-TOTAL</span>
