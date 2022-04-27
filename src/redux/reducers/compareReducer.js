@@ -24,7 +24,7 @@ const compareReducer = (state = INITIAL_STATE,action) =>{
                     return{
                         ...state,
                         compareList: [...state.compareList, product],
-                        comQty: state.compQty + 1
+                        compQty: state.compQty + 1
                     }
                 }
         case actionTypes.REMOVE_COMPARE:

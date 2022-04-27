@@ -3,6 +3,7 @@ import * as actionTypes from '../actionTypes';
 const INITIAL_STATE = {
     products:[],
     cart:[],
+    cartQTy:0,
     currentItem:null
 }
 
