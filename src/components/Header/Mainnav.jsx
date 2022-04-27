@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
 import {useSelector} from 'react-redux'
 
@@ -8,9 +8,26 @@ const Mainnav = () => {
     const {totalQty} = useSelector(state => state.wishList)
     const {compQty} = useSelector(state => state.compareList)
 
+    const [stickyClass, setStickyClass] = useState(false);
+
+    useEffect(() => {
+      window.addEventListener('scroll', stickNavbar);
+  
+      return () => {
+        window.removeEventListener('scroll', stickNavbar);
+      };
+    }, []);
+  
+    const stickNavbar = () => {
+      if (window !== undefined) {
+        let windowHeight = window.scrollY;
+        windowHeight > 80 ? setStickyClass(true) : setStickyClass(false);
+      }
+    };
+
     return (
         <>
-            <div className="fs-main-nav">
+            <div className={`fs-main-nav ${stickyClass ? 'sticky' : ''}`}>
                 <div className="container">
                     <div className="main-nav">
                         <div className="auto">
@@ -35,7 +52,7 @@ const Mainnav = () => {
                                 <div className='nav-icon'><Link to="#"><span className='count'>{compQty}</span><i className="fa-solid fa-shuffle"></i></Link></div>
                                 <div className='nav-icon'><Link to="#"><span className='count'>{totalQty}</span><i className="fas fa-heart"></i></Link></div>
                                 <div className="nav-cart shopping-cart nav-icon">
-                                    <span className='count'>0</span>
+                                    <span className='count'>{cart.length}</span>
                                     <i className="fas fa-shopping-cart"></i>
                                     <div className="shopping-cart-popup">
                                         <div className="shopping-cart-popup-content">
