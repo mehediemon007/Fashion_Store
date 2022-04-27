@@ -36,3 +36,35 @@ export const loadCurrentItem = (item) =>{
         payload:item
     }
 }
+
+export const addToWishList = (product) =>{
+    
+    return{
+        type: actionTypes.ADD_TO_WISHLIST,
+        product
+    }
+}
+
+export const removeFromWishList = (itemId) =>{
+
+    return{
+        type: actionTypes.REMOVE_WISHLIST,
+        itemId
+    }
+}
+
+export const addToCompare = (product) =>{
+    
+    return{
+        type: actionTypes.ADD_TO_COMPARE,
+        product
+    }
+}
+
+export const removeFromCompare = (itemId) =>{
+
+    return{
+        type: actionTypes.REMOVE_COMPARE,
+        itemId
+    }
+}

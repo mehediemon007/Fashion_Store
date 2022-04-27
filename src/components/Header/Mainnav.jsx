@@ -5,6 +5,8 @@ import {useSelector} from 'react-redux'
 const Mainnav = () => {
 
     const {cart} = useSelector(state => state.cart)
+    const {totalQty} = useSelector(state => state.wishList)
+    const {compQty} = useSelector(state => state.compareList)
 
     return (
         <>
@@ -30,8 +32,8 @@ const Mainnav = () => {
                         </div>
                         <div className="col-auto">
                             <div className="nav-right d-flex justify-content-between align-items-center">
-                                <div className='nav-icon'><Link to="#"><span className='count'>0</span><i className="fa-solid fa-shuffle"></i></Link></div>
-                                <div className='nav-icon'><Link to="#"><span className='count'>0</span><i className="fas fa-heart"></i></Link></div>
+                                <div className='nav-icon'><Link to="#"><span className='count'>{compQty}</span><i className="fa-solid fa-shuffle"></i></Link></div>
+                                <div className='nav-icon'><Link to="#"><span className='count'>{totalQty}</span><i className="fas fa-heart"></i></Link></div>
                                 <div className="nav-cart shopping-cart nav-icon">
                                     <span className='count'>0</span>
                                     <i className="fas fa-shopping-cart"></i>
@@ -42,8 +44,8 @@ const Mainnav = () => {
                                                 <a href="shop-cart.html" className="view-cart">VIEW CART</a>
                                             </div>
                                             <ul className="cart-product-list">
-                                                {cart.map(item=>(
-                                                    <li className="cart-product-item">
+                                                {cart.map((item,index)=>(
+                                                    <li className="cart-product-item" key={index}>
                                                         <div className="cart-product-image">
                                                             <div className="product-inner">
                                                                 <span href="#" className="product-remove">&#xd7;</span>

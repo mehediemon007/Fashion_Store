@@ -1,7 +1,7 @@
 import React,{useState, useRef, useEffect} from 'react';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {Link} from "react-router-dom"
-import { addToCart} from "../../redux/actions"
+import { addToCart, addToWishList, addToCompare } from "../../redux/actions";
 
 const SigngleProduct = (props) => {
 
@@ -64,8 +64,8 @@ const SigngleProduct = (props) => {
                     </div>
                     <div className="action-btns">
                         <Link to="" className='action-btn'><i className="fa-solid fa-eye"></i></Link>
-                        <Link to="" className='action-btn'><i className="fa-solid fa-heart"></i></Link>
-                        <Link to="" className='action-btn'><i className="fa-solid fa-shuffle"></i></Link>
+                        <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToWishList(product))}}><i className="fa-solid fa-heart"></i></Link>
+                        <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToCompare(product))}}><i className="fa-solid fa-shuffle"></i></Link>
                     </div>
                 </div>
                 <div className="product-content">
