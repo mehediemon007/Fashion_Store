@@ -1,8 +1,10 @@
 import React,{useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
-import {useSelector} from 'react-redux'
+import {useSelector} from 'react-redux';
 
 const Mainnav = () => {
+
+    const [openCart, showCart] = useState(false);
 
     const {cart} = useSelector(state => state.cart)
     const {totalQty} = useSelector(state => state.wishList)
@@ -51,40 +53,46 @@ const Mainnav = () => {
                             <div className="nav-right d-flex justify-content-between align-items-center">
                                 <div className='nav-icon'><Link to="#"><span className='count'>{compQty}</span><i className="fa-solid fa-shuffle"></i></Link></div>
                                 <div className='nav-icon'><Link to="#"><span className='count'>{totalQty}</span><i className="fas fa-heart"></i></Link></div>
-                                <div className="nav-cart shopping-cart nav-icon">
+                                <div className="nav-cart shopping-cart nav-icon" onClick={()=> showCart(!openCart)}>
                                     <span className='count'>{cart.length}</span>
                                     <i className="fas fa-shopping-cart"></i>
-                                    <div className="shopping-cart-popup">
-                                        <div className="shopping-cart-popup-content">
-                                            <div className="total-item">
-                                                <span className="product-count">3 ITEMS</span>
-                                                <a href="shop-cart.html" className="view-cart">VIEW CART</a>
-                                            </div>
-                                            <ul className="cart-product-list">
-                                                {cart.map((item,index)=>(
-                                                    <li className="cart-product-item" key={index}>
-                                                        <div className="cart-product-image">
-                                                            <div className="product-inner">
-                                                                <span href="#" className="product-remove">&#xd7;</span>
-                                                                <img src={`/images/products/${item.thumbnail}`} alt={item.alt}/>
-                                                            </div>
+                                </div>
+                                <div className={`shopping-cart-popup ${openCart ? 'show' : ''}`}>
+                                    <div className="shopping-cart-popup-content">
+                                        <div className="total-item">
+                                            <span className="product-count">{cart.length} ITEMS</span>
+                                            <span className='toggleIcon' onClick={()=> showCart(!openCart)}><i className="fa-solid fa-xmark"></i></span>
+                                        </div>
+                                        {cart.length ? <ul className="cart-product-list">
+                                            {cart.map((item,index)=>(
+                                                <li className="cart-product-item" key={index}>
+                                                    <div className="cart-product-image">
+                                                        <div className="product-inner">
+                                                            <span href="#" className="product-remove">&#xd7;</span>
+                                                            <img src={`/images/products/${item.thumbnail}`} alt={item.alt}/>
                                                         </div>
-                                                        <div className="cart-product-details">
-                                                            <Link to={`/product_details/${item.id}`}>{item.name}</Link>
-                                                            <div className="cart-product-quantity">
-                                                                <span>{item.qty} x </span>
-                                                                <span>${item.price}</span>
-                                                            </div>
+                                                    </div>
+                                                    <div className="cart-product-details">
+                                                        <Link to={`/product_details/${item.id}`}>{item.name}</Link>
+                                                        <div className="cart-product-quantity">
+                                                            <span>{item.qty} x </span>
+                                                            <span>${item.price}</span>
                                                         </div>
-                                                    </li>
-                                                ))}
-                                            </ul>
+                                                    </div>
+                                                </li>
+                                            ))}
+                                        </ul> : <p className='empty-cart'>Cart Is Empty</p> }
+                                        {cart.length > 0 && 
                                             <div className="sub-total">
                                                 <span>SUB-TOTAL</span>
                                                 <span>$1000</span>
                                             </div>
-                                            <a href="shop-cart.html" className="chechout-btn">CHECK OUT</a>
-                                        </div>
+                                                    &&
+                                            <>
+                                                <Link to="/shop_cart" className="view-btn">VIEW CART</Link>
+                                                <Link to="/checkout" className="chechout-btn">CHECK OUT</Link>
+                                            </>
+                                        }
                                     </div>
                                 </div>
                                 <div className="nav-user">

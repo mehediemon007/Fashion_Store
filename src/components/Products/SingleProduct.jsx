@@ -2,6 +2,7 @@ import React,{useState, useRef, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {Link} from "react-router-dom"
 import { addToCart, addToWishList, addToCompare } from "../../redux/actions";
+import QuickViewModal from '../widgets/QuickViewModal';
 
 const SigngleProduct = (props) => {
 
@@ -11,6 +12,7 @@ const SigngleProduct = (props) => {
 
     const [previewImg , setPreviewImg] = useState("");
     const [selectedThumb, setThumb] = useState("");
+    const [modal,setModal] = useState(false)
 
     // let thumbImg = useRef([])
     const thumbImg = []; 
@@ -63,7 +65,7 @@ const SigngleProduct = (props) => {
                         {product.images.map((img,index)=> <img src={`/images/products/${img}`} alt={product.name} key={index} onClick={()=>handleThumbImage(img,index)} ref={el => thumbImg.push(el)}/>)}
                     </div>
                     <div className="action-btns">
-                        <Link to="" className='action-btn'><i className="fa-solid fa-eye"></i></Link>
+                        <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); setModal(!modal)}}><i className="fa-solid fa-eye"></i></Link>
                         <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToWishList(product))}}><i className="fa-solid fa-heart"></i></Link>
                         <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToCompare(product))}}><i className="fa-solid fa-shuffle"></i></Link>
                     </div>
@@ -81,6 +83,7 @@ const SigngleProduct = (props) => {
                     <Link to="" className='add-cart-btn action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToCart(product))}}><i className="fa-solid fa-bag-shopping"></i></Link>
                 </div>
             </div>
+            <QuickViewModal product={product} modal={{modal,setModal}}/>
         </>
     )
 }
