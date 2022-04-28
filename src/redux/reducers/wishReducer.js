@@ -2,7 +2,7 @@ import * as actionTypes from '../actionTypes';
 
 const INITIAL_STATE = {
     wishList:[],
-    totalQty:0
+    wishQty:0
 }
 
 const wishReducer = (state = INITIAL_STATE,action) =>{
@@ -24,13 +24,14 @@ const wishReducer = (state = INITIAL_STATE,action) =>{
                     return{
                         ...state,
                         wishList: [...state.wishList, product],
-                        totalQty: state.totalQty + 1
+                        wishQty: state.wishQty + 1
                     }
                 }
         case actionTypes.REMOVE_WISHLIST:
             return {
                 ...state,
-                wishList: state.wishList.filter(item => item.id === action.id)
+                wishList: state.wishList.filter(item => item.id !== action.itemId),
+                wishQty: state.wishQty - 1
             }
         default:
             return state

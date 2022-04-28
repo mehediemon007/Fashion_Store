@@ -11,7 +11,7 @@ const Mainnav = () => {
     const [totalPrice, setTotal] = useState(0)
 
     const {cart} = useSelector(state => state.cart)
-    const {totalQty} = useSelector(state => state.wishList)
+    const {wishQty} = useSelector(state => state.wishList)
     const {compQty} = useSelector(state => state.compareList)
 
     const [stickyClass, setStickyClass] = useState(false);
@@ -62,7 +62,7 @@ const Mainnav = () => {
                         <div className="col-auto">
                             <div className="nav-right d-flex justify-content-between align-items-center">
                                 <div className='nav-icon'><Link to="#"><span className='count'>{compQty}</span><i className="fa-solid fa-shuffle"></i></Link></div>
-                                <div className='nav-icon'><Link to="#"><span className='count'>{totalQty}</span><i className="fas fa-heart"></i></Link></div>
+                                <div className='nav-icon'><Link to="/wishlist"><span className='count'>{wishQty}</span><i className="fas fa-heart"></i></Link></div>
                                 <div className="nav-cart shopping-cart nav-icon" onClick={()=> showCart(!openCart)}>
                                     <span className='count'>{cart.length}</span>
                                     <i className="fas fa-shopping-cart"></i>
