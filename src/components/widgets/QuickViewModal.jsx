@@ -2,12 +2,22 @@ import React,{useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import 'swiper/css'
 import 'swiper/css/navigation'
-import 'swiper/css/thumbs'
+import 'swiper/css/thumbs';
+import { useDispatch } from 'react-redux';
+import { addToCart} from "../../redux/actions";
 import ProductSlider from '../Products/ProductSlider';
 
 const QuickViewModal = ({product, modal:{modal,setModal}}) => {
+
+    let dispatch = useDispatch();
     
     const [productQty,setQty] = useState(1);
+
+    const handleCart = (product)=>{
+        dispatch(addToCart(product, productQty));
+        setModal(false)
+
+    }
 
     useEffect(()=>{
 
@@ -17,7 +27,7 @@ const QuickViewModal = ({product, modal:{modal,setModal}}) => {
         <>
             <div className={`fs-quick-view ${modal ? 'show' : ''} `}>
                 <div className="quick-view-container">
-                    <span className='modal-close' onClick={()=> setModal(false)}><i class="fa-solid fa-xmark"></i></span>
+                    <span className='modal-close' onClick={()=> setModal(false)}><i className="fa-solid fa-xmark"></i></span>
                     <div className="fs-product-details my-5">
                         <div className="row">
                             <div className="col-6">
@@ -66,7 +76,7 @@ const QuickViewModal = ({product, modal:{modal,setModal}}) => {
                                     </div>
                                     <div className='my-4'>
                                         <span className="product-quantity">{productQty}<Link to="#" className='qty-btn inc-btn' onClick={()=> setQty(productQty + 1)}><i className="fa-solid fa-angle-up"></i></Link><Link to="#" className='qty-btn dec-btn' onClick={()=>{(productQty == 1) ? setQty(1) : setQty(productQty - 1)}}><i className="fa-solid fa-angle-down"></i></Link></span>
-                                        <Link to="#" className='cart-btn'>Add To Cart</Link>
+                                        <Link to="#" className='cart-btn' onClick={()=>handleCart(product)}>Add To Cart</Link>
                                     </div>
                                     <p>Availability : <span style={{color:'MediumSeaGreen'}}>Items In Stock</span></p>
                                     <div className='product-share mt-4'>

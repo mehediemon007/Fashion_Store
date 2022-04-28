@@ -508,6 +508,7 @@ label{
   color: #fff;
   text-align: center;
   line-height: 20px;
+  cursor: pointer;
 }
 
 .shopping-cart-popup .sub-total {

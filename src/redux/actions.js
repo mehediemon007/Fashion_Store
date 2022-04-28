@@ -1,10 +1,13 @@
 import * as actionTypes from './actionTypes'
 
-export const addToCart = (product) =>{
+export const addToCart = (product, pQty=1) =>{
 
     return{
         type: actionTypes.ADD_TO_CART,
-        product
+        payload:{
+            product,
+            pQty
+        }
     }
 }
 

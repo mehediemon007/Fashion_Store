@@ -8,12 +8,16 @@ import { Tabs, Tab } from "react-bootstrap";
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
+import {useDispatch, useSelector} from 'react-redux';
+import { addToCart } from "../redux/actions";
 import AdditionalInfo from '../components/Tabs/AdditionalInfo';
 import Reviews from '../components/Tabs/Reviews';
 import ProductDescription from '../components/Tabs/ProductDescription';
 import RelatedProducts from '../components/Products/RelatedProducts';
 
 const ProductDetails = () => {
+
+    let dispatch = useDispatch();
 
     const {product_id} = useParams();
 
@@ -76,7 +80,7 @@ const ProductDetails = () => {
                                     </div>
                                     <div className='my-4'>
                                         <span className="product-quantity">{productQty}<Link to="#" className='qty-btn inc-btn' onClick={()=> setQty(productQty + 1)}><i className="fa-solid fa-angle-up"></i></Link><Link to="#" className='qty-btn dec-btn' onClick={()=>{(productQty == 1) ? setQty(1) : setQty(productQty - 1)}}><i className="fa-solid fa-angle-down"></i></Link></span>
-                                        <Link to="#" className='cart-btn'>Add To Cart</Link>
+                                        <Link to="#" className='cart-btn' onClick={()=>dispatch(addToCart(product,productQty))}>Add To Cart</Link>
                                     </div>
                                     <p>Availability : <span style={{color:'MediumSeaGreen'}}>Items In Stock</span></p>
                                     <div className='product-share mt-4'>

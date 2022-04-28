@@ -1,10 +1,14 @@
 import React,{useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import {removeFromCart} from "../../redux/actions"
 
 const Mainnav = () => {
 
+    const dispatch = useDispatch();
+
     const [openCart, showCart] = useState(false);
+    const [totalPrice, setTotal] = useState(0)
 
     const {cart} = useSelector(state => state.cart)
     const {totalQty} = useSelector(state => state.wishList)
@@ -19,6 +23,12 @@ const Mainnav = () => {
         window.removeEventListener('scroll', stickNavbar);
       };
     }, []);
+
+    useEffect(()=>{
+        let totalPrice = 0;
+        cart.forEach(item=> totalPrice+= item.qty * item.price);
+        setTotal(totalPrice)
+    },[cart])
   
     const stickNavbar = () => {
       if (window !== undefined) {
@@ -68,7 +78,7 @@ const Mainnav = () => {
                                                 <li className="cart-product-item" key={index}>
                                                     <div className="cart-product-image">
                                                         <div className="product-inner">
-                                                            <span href="#" className="product-remove">&#xd7;</span>
+                                                            <span href="#" className="product-remove" onClick={()=> dispatch(removeFromCart(item.id))}>&#xd7;</span>
                                                             <img src={`/images/products/${item.thumbnail}`} alt={item.alt}/>
                                                         </div>
                                                     </div>
@@ -83,12 +93,11 @@ const Mainnav = () => {
                                             ))}
                                         </ul> : <p className='empty-cart'>Cart Is Empty</p> }
                                         {cart.length > 0 && 
-                                            <div className="sub-total">
-                                                <span>SUB-TOTAL</span>
-                                                <span>$1000</span>
-                                            </div>
-                                                    &&
                                             <>
+                                                <div className="sub-total">
+                                                    <span>SUB-TOTAL</span>
+                                                    <span>${totalPrice}</span>
+                                                </div>
                                                 <Link to="/shop_cart" className="view-btn">VIEW CART</Link>
                                                 <Link to="/checkout" className="chechout-btn">CHECK OUT</Link>
                                             </>

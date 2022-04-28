@@ -12,16 +12,16 @@ const cartReducer = (state = INITIAL_STATE,action) =>{
     switch(action.type){
 
         case actionTypes.ADD_TO_CART:
-            const product = action.product;
+            const {product, pQty } = action.payload;
             const inCart = state.cart.find(item => item.id === product.id)
             return{
                 ...state,
-                cart : inCart ? state.cart.map((item) => item.id === product.id ? {...item, qty: item.qty +1 } : item) : [...state.cart, {...product, qty:1}]
+                cart : inCart ? state.cart.map((item) => item.id === product.id ? {...item, qty: pQty } : item) : [...state.cart, {...product, qty:pQty}]
             }
         case actionTypes.REMOVE_CART:
             return {
                 ...state,
-                cart: state.cart.filter(item => item.id === action.payload.id)
+                cart: state.cart.filter(item => item.id !== action.payload.id)
             }
         case actionTypes.UPDATE_QTY:
             return {
