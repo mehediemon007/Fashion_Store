@@ -30,7 +30,8 @@ const compareReducer = (state = INITIAL_STATE,action) =>{
         case actionTypes.REMOVE_COMPARE:
             return {
                 ...state,
-                compareList: state.compareList.filter(item => item.id === action.id)
+                compareList: state.compareList.filter(item => item.id !== action.itemId),
+                compQty : state.compQty - 1
             }
         default:
             return state

@@ -1117,7 +1117,7 @@ label{
   border-top: none !important;
 }
 
-.wishlist-table th{
+.table th{
   font-weight: var(--font-weight-medium);
   padding: 8px 16px;
   text-align: center;
@@ -1125,7 +1125,7 @@ label{
   border-bottom: none;
 }
 
-.wishlist-table td{
+.table td{
   text-align: center;
   vertical-align: middle;
   padding: 0 10px;
@@ -1151,6 +1151,14 @@ label{
 .del-wishlist{
   color: #f34848;
   cursor: pointer;
+}
+
+.comp-table .product-img{
+  padding: 24px;
+}
+
+.comp-table .product-img img{
+  max-height: 500px;
 }
 
 /* Footer */
