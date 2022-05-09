@@ -13,7 +13,7 @@ const Toolbar = () => {
                         <Link to="/" className='tool-link'>Merchant Zone</Link>
                         <Link to="/" className='tool-link'>Upload&order</Link>
                         <Link to="/" className='tool-link'>Track order</Link>
-                        <Link to="/" className='tool-link'>Live Chat</Link>
+                        <Link to="/chat" className='tool-link'>Live Chat</Link>
                         <a href="tel:01890234576" className='tool-link'><i className="fa-solid fa-phone"></i> 16731</a>
                     </div>
                 </div>

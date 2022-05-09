@@ -1015,6 +1015,10 @@ label{
   padding-left: 0;
 }
 
+.single-filter .form-select:focus{
+  box-shadow: none;
+}
+
 .single-widget{
   border: 1px solid #e2e9e1;
   padding: 20px;

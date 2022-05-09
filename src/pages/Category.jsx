@@ -44,20 +44,20 @@ const Category = () => {
                                             <label htmlFor="">Show:</label>
                                             <select className="form-select" aria-label="Default select example">
                                                 <option>16</option>
-                                                <option value="1">10</option>
-                                                <option value="2">14</option>
-                                                <option value="3">16</option>
+                                                <option value="10">10</option>
+                                                <option value="14">14</option>
+                                                <option value="16">16</option>
                                             </select>
                                         </div>
                                         <div className="single-filter">
                                             <i className="fa-solid fa-arrow-up-wide-short"></i>
                                             <label htmlFor="">Short by:</label>
                                             <select className="form-select" aria-label="Default select example">
-                                                <option>Defaults</option>
-                                                <option value="1">Featured</option>
-                                                <option value="2">Trending</option>
-                                                <option value="3">Low To High</option>
-                                                <option value="3">High To Low</option>
+                                                <option className='selt-opt'>Defaults</option>
+                                                <option className='selt-opt' value="1">Featured</option>
+                                                <option className='selt-opt' value="2">Trending</option>
+                                                <option className='selt-opt' value="3">Low To High</option>
+                                                <option className='selt-opt' value="4">High To Low</option>
                                             </select>
                                         </div>
                                     </div>
