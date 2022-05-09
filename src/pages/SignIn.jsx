@@ -29,7 +29,7 @@ const SignIn = () => {
                                     <i class="fa-solid fa-lock"></i>
                                 </div>
                                 <div className="sign-action">
-                                    <div className="signed-in">
+                                    <div className="signed-in d-flex align-items-center">
                                         <input type="checkbox" id='signedIn'/>
                                         <label htmlFor="sigedIn">Keep Me Signed In</label>
                                     </div>

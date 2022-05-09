@@ -104,7 +104,7 @@ const Mainnav = () => {
                                         }
                                     </div>
                                 </div>
-                                <Link to="/sign-in" className="nav-user">
+                                <Link to="/sign-up" className="nav-user">
                                     <i><i className="fa-solid fa-user"></i></i> My Account
                                 </Link>
                             </div>
