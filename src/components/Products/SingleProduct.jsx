@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {Link} from "react-router-dom"
 import { addToCart, addToWishList, addToCompare } from "../../redux/actions";
 import QuickViewModal from '../widgets/QuickViewModal';
+import {ToastContainer,toast} from 'react-toastify';
 
 const SigngleProduct = (props) => {
 
@@ -53,6 +54,10 @@ const SigngleProduct = (props) => {
 
     },[product])
 
+    const notify = (msg) =>{
+        toast(msg);
+    }
+
     return (
         <>
             <div className="single-product">
@@ -66,8 +71,8 @@ const SigngleProduct = (props) => {
                     </div>
                     <div className="action-btns">
                         <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); setModal(!modal)}}><i className="fa-solid fa-eye"></i></Link>
-                        <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToWishList(product))}}><i className="fa-solid fa-heart"></i></Link>
-                        <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToCompare(product))}}><i className="fa-solid fa-shuffle"></i></Link>
+                        <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToWishList(product)) ; notify("Add To Wishlist!") }}><i className="fa-solid fa-heart"></i></Link>
+                        <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToCompare(product)); notify("Add To Compare!")}}><i className="fa-solid fa-shuffle"></i></Link>
                     </div>
                 </div>
                 <div className="product-content">
@@ -80,10 +85,11 @@ const SigngleProduct = (props) => {
                     </div>
                     <Link to={`/product_details/${product.id}`}><h5 className='product-name'>{product.name}</h5></Link>
                     <p className='price'>&#2547; {product.price}</p>
-                    <Link to="" className='add-cart-btn action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToCart(product))}}><i className="fa-solid fa-bag-shopping"></i></Link>
+                    <Link to="" className='add-cart-btn action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToCart(product)) ; notify("Add To Cart!")}}><i className="fa-solid fa-bag-shopping"></i></Link>
                 </div>
             </div>
             <QuickViewModal product={product} modal={{modal,setModal}}/>
+            <ToastContainer />
         </>
     )
 }
