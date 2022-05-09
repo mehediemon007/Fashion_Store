@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import Header from '../components/Header/Header';
 import Footer from '../footer/Footer';
 import { useParams, Link } from 'react-router-dom';
@@ -19,13 +19,27 @@ const ProductDetails = () => {
 
     let dispatch = useDispatch();
 
-    const {product_id} = useParams();
+    const {cart} = useSelector(state => state.cart);
 
-    const [productQty,setQty] = useState(1)
+    const {product_id} = useParams();
 
     const product = data.products.find(product => product.id == product_id);
 
+    const [productQty,setQty] = useState(1)
+
     const [key, setKey] = useState("description");
+
+    useEffect(()=>{
+
+        const cartProduct = cart.find(product => product.id == product_id);
+
+        if(cartProduct != null){
+            
+            setQty(cartProduct.qty)
+        }
+
+    },[])
+
 
     return (
         <>

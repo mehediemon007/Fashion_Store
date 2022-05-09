@@ -21,14 +21,19 @@ export const removeFromCart = (itemId) =>{
     }
 }
 
-export const updateQty = (itemId, value) =>{
+export const incQty = (itemId) =>{
 
     return{
-        type:actionTypes.UPDATE_QTY,
-        payload:{
-            id:itemId,
-            qty:value
-        }
+        type:actionTypes.INC_QTY,
+        id:itemId,
+    }
+}
+
+export const decQty = (itemId) =>{
+
+    return{
+        type:actionTypes.DEC_QTY,
+        id:itemId,
     }
 }
 

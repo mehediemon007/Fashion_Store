@@ -23,10 +23,15 @@ const cartReducer = (state = INITIAL_STATE,action) =>{
                 ...state,
                 cart: state.cart.filter(item => item.id !== action.payload.id)
             }
-        case actionTypes.UPDATE_QTY:
+        case actionTypes.INC_QTY:
             return {
                 ...state,
-                cart: state.cart.map(item => item.id === action.payload.id ? {...item, qty: action.payload.value}: item)
+                cart: state.cart.map(item => item.id === action.id ? {...item, qty: item.qty + 1}: item)
+            }
+        case actionTypes.DEC_QTY:
+            return {
+                ...state,
+                cart: state.cart.map(item => item.id === action.id ? {...item, qty: item.qty - 1}: item)
             }
         case actionTypes.LOAD_CURRENT_ITEM:
             return {

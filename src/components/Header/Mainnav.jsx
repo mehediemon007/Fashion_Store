@@ -98,7 +98,7 @@ const Mainnav = () => {
                                                     <span>SUB-TOTAL</span>
                                                     <span>${totalPrice}</span>
                                                 </div>
-                                                <Link to="/shop_cart" className="view-btn">VIEW CART</Link>
+                                                <Link to="/shopcart" className="view-btn">VIEW CART</Link>
                                                 <Link to="/checkout" className="chechout-btn">CHECK OUT</Link>
                                             </>
                                         }
