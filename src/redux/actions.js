@@ -71,3 +71,10 @@ export const removeFromCompare = (itemId) =>{
         itemId
     }
 }
+
+export const authInfo = (user) =>{
+    return{
+        type: actionTypes.SIGN_USER,
+        user
+    }
+}
