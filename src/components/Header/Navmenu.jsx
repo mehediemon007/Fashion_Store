@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import {catList} from "../Category/Category"
 
 const Navmenu = () => {
 
@@ -19,6 +20,13 @@ const Navmenu = () => {
                                         <Link to="/"><h5>Fashion Store</h5></Link>
                                         <span className='toggleIcon' onClick={()=> setOpen(!navOpen)}><i className="fa-solid fa-xmark"></i></span>
                                     </div>
+                                    <ul className="nav-menu">
+                                        {catList.map((categoty,index) =>(
+                                            <li key={index}>
+                                                <Link to={`/category/${categoty.name.toLowerCase()}`}><img src={`images/category/${categoty.image}`} alt="category"/> {categoty.name}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
                         </div>

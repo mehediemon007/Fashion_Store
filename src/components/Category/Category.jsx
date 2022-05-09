@@ -1,58 +1,59 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+export const catList =[
+    {
+        image:"grocery.png",
+        name:"Fashion"
+    },
+    {
+        image:"grocery.png",
+        name:"Cosmetic"
+    },
+    {
+        image:"grocery.png",
+        name:"Home & Lifestyle"
+    },
+    {
+        image:"grocery.png",
+        name:"Mobile & Tablets"
+    },
+    {
+        image:"grocery.png",
+        name:"Automobiles"
+    },
+    {
+        image:"grocery.png",
+        name:"Sports & Outdoors"
+    },
+    {
+        image:"grocery.png",
+        name:"Home & Lifestyle"
+    },
+    {
+        image:"grocery.png",
+        name:"Home & Lifestyle"
+    },
+    {
+        image:"grocery.png",
+        name:"Home & Lifestyle"
+    },
+    {
+        image:"grocery.png",
+        name:"Home & Lifestyle"
+    },
+    {
+        image:"grocery.png",
+        name:"Home & Lifestyle"
+    },
+    {
+        image:"grocery.png",
+        name:"Home & Lifestyle"
+    },
+]
+
 const Category = () => {
 
-    const catList =[
-        {
-            image:"grocery.png",
-            name:"Fashion"
-        },
-        {
-            image:"grocery.png",
-            name:"Cosmetic"
-        },
-        {
-            image:"grocery.png",
-            name:"Home & Lifestyle"
-        },
-        {
-            image:"grocery.png",
-            name:"Mobile & Tablets"
-        },
-        {
-            image:"grocery.png",
-            name:"Automobiles"
-        },
-        {
-            image:"grocery.png",
-            name:"Sports & Outdoors"
-        },
-        {
-            image:"grocery.png",
-            name:"Home & Lifestyle"
-        },
-        {
-            image:"grocery.png",
-            name:"Home & Lifestyle"
-        },
-        {
-            image:"grocery.png",
-            name:"Home & Lifestyle"
-        },
-        {
-            image:"grocery.png",
-            name:"Home & Lifestyle"
-        },
-        {
-            image:"grocery.png",
-            name:"Home & Lifestyle"
-        },
-        {
-            image:"grocery.png",
-            name:"Home & Lifestyle"
-        },
-    ]
     return (
         <>
             <div className="fs-category sec-spacer-50">
