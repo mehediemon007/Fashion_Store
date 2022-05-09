@@ -624,7 +624,7 @@ label{
 
 .nav-menu li a:hover{
   color: var(--white-color) !important;
-  background-color: var(--primary-color);
+  background-color: #ef4813b3;
 }
 
 .nav-menu li a img{
