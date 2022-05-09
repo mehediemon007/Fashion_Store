@@ -606,7 +606,7 @@ label{
 .menu-heading{
   display: flex;
   justify-content: space-between;
-  padding: 16px 8px;
+  padding: 20px 16px;
   border-bottom: 1px solid #d3d3d3;
 }
 
