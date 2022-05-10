@@ -1769,7 +1769,7 @@ label{
   margin: 8px;
 }
 
-.order-info{
+.order-infos{
   display: flex;
   align-items: center;
   gap: 24px;
@@ -1782,11 +1782,13 @@ label{
 
 .order-sts{
   width: max-content;
-  padding: 2px 5px;
-  border-radius: 4px;
+  font-size: .95rem;
   color: var(--white-color);
   background-color: #e56941b8;
   border: 1px solid var(--primary-color);
+  padding: 2px 5px;
+  border-radius: 4px;
   margin-top: 8px;
+  text-transform: capitalize;
 }
 

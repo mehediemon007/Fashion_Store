@@ -1,20 +1,18 @@
-import React,{useEffect,useState} from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
+import {Link, useParams} from 'react-router-dom';
 import Header from '../components/Header/Header'
 import Footer from '../footer/Footer';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const OrderList = () => {
 
-    const [totalPrice, setTotal] = useState(0)
+    const {orderId} = useParams();
 
-    const {cart: orderProducts} = useSelector(state => state.cart);
+    const {orders} = useSelector(state => state.orderInfo);
 
-    useEffect(()=>{
-        let totalPrice = 0;
-        orderProducts.forEach(item=> totalPrice+= item.qty * item.price);
-        setTotal(totalPrice)
-    },[orderProducts])
+    const {products, totalPrice} = orders.find(order => order.orderId == orderId);
+
+
     return (
         <>
             <Header/>
@@ -23,16 +21,16 @@ const OrderList = () => {
                     <div className="order-details">
                         <div className="order-heading">
                             <div className="order-info">
-                                <h4>Order Id: #799Er45t</h4>
+                                <h4>Order Id: {orderId}</h4>
                                 <div className="order-timeline-data">
                                     <p><b>Order date:</b> April 10, 2022</p>
                                     <p className='text-success'><b><i className="fa-solid fa-motorcycle"></i> Estimated Delivery:</b> April 20, 2022</p>
                                 </div>
                             </div>
-                            <Link to="/" className='cart-btn'>Track Order</Link>
+                            <Link to="track" className='cart-btn'>Track Order</Link>
                         </div>
                         <div className="ordered-products">
-                            {orderProducts.map((product,index) =>(
+                            {products.map((product,index) =>(
                                 <div className="single-product" key={index}>
                                     <div className="product-info d-flex align-items-center">
                                         <div className="product-image">

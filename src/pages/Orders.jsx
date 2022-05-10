@@ -19,9 +19,9 @@ const Orders = () => {
                         <div className="fs-orders">
                             <h4 className='mb-3'>My Orders</h4>
                             {orders.map((order,index)=>(
-                                <Link to="/orders/order-list" key={index}>
+                                <Link to={`/orders/${order.orderId}`} key={index}>
                                     <div className="single-order">
-                                        <div className="order-info">
+                                        <div className="order-infos">
                                             <div className="order-image">
                                                 <img src={`/images/products/${order.products[0].thumbnail}`} alt={order.products[0].alt} />
                                             </div>
