@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React,{useEffect,useState} from 'react';
 import {Link} from 'react-router-dom';
 import Header from '../components/Header/Header'
 import Footer from '../footer/Footer';
@@ -6,12 +6,15 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const OrderList = () => {
 
+    const [totalPrice, setTotal] = useState(0)
+
     const {cart: orderProducts} = useSelector(state => state.cart);
 
     useEffect(()=>{
-
-    },[])
-
+        let totalPrice = 0;
+        orderProducts.forEach(item=> totalPrice+= item.qty * item.price);
+        setTotal(totalPrice)
+    },[orderProducts])
     return (
         <>
             <Header/>
@@ -45,6 +48,11 @@ const OrderList = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                        <div className="order-total text-end">
+                            <p><b>Cart Subtotal:</b> <span>&#2547; {totalPrice}</span></p>
+                            <p><b>Shipping:</b> <span>Free Shipping</span></p>
+                            <p><b>Total:</b> <span>&#2547; {totalPrice}</span></p>
                         </div>
                     </div>
                 </div>

@@ -1724,7 +1724,7 @@ label{
   justify-content: space-between;
   align-items: flex-start;
   padding-bottom: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   border-bottom: 1px dashed var(--primary-color);
 }
 
@@ -1752,5 +1752,11 @@ label{
 .order-details .single-product .product-image img{
   width: 55px;
   border-radius: 10px;
+}
+
+.order-total p{
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  margin-bottom: 10px;
 }
 
