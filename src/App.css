@@ -1717,3 +1717,34 @@ label{
   text-align: left;
 }
 
+/* Order Track */
+
+.order-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px dashed var(--primary-color);
+}
+
+.order-timeline-data{
+  display: flex;
+  gap: 32px;
+  margin-top: 10px;
+}
+
+.order-details{
+  width: 80%;
+  padding: 32px;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.order-details .single-product{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 24px;
+}
+

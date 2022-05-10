@@ -62,9 +62,6 @@ const ShopCart = () => {
                                             </tbody>
                                         </table>
                                     </div>
-                                    {cart.length > 0 && <div className='text-end'>
-                                        <Link to="/" className='cart-btn'><i class="fa-solid fa-bag-shopping"></i> Continue Shopping</Link>
-                                    </div>}
                                 </div>
                             </div>
                         </div>
@@ -113,6 +110,12 @@ const ShopCart = () => {
                                                     </tr>
                                             </tbody>
                                         </table>
+                                    </div>
+                                    <div className="text-end mt-3">
+                                        {cart.length > 0 && <div className='text-end'>
+                                            <Link to="/" className='cart-btn'><i class="fa-solid fa-bag-shopping"></i> Continue Shopping</Link>
+                                            <Link to="/" className='cart-btn'><i className="fa-solid fa-credit-card"></i> Checkout</Link>
+                                        </div>}
                                     </div>
                                 </div>
                             </div>
