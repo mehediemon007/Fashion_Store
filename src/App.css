@@ -1749,7 +1749,8 @@ label{
   padding: 8px 24px;
 }
 
-.order-details .single-product .product-image img{
+.order-details .single-product .product-image img,
+.order-image img{
   width: 55px;
   border-radius: 10px;
 }
@@ -1758,5 +1759,34 @@ label{
   display: grid;
   grid-template-columns: 1fr 120px;
   margin-bottom: 10px;
+}
+
+.fs-orders .single-order{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 24px;
+  box-shadow: 0 0 4px rgb(0 0 0 / 10%);
+  margin: 8px;
+}
+
+.order-info{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.order-meta-data h6{
+  font-size: 1.15rem;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.order-sts{
+  width: max-content;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: var(--white-color);
+  background-color: #e56941b8;
+  border: 1px solid var(--primary-color);
+  margin-top: 8px;
 }
 

@@ -1,4 +1,5 @@
-import * as actionTypes from './actionTypes'
+import * as actionTypes from './actionTypes';
+import { v4 as uuid } from 'uuid';
 
 export const addToCart = (product, pQty=1) =>{
 
@@ -88,8 +89,8 @@ export const placeOrder = ( cart, totalPrice) =>{
     return{
         type: actionTypes.PLACE_ORDER,
         order:{
-            orderId:"",
-            Invoiced:"",
+            orderId:uuid(),
+            Invoiced:uuid(),
             status:"pending",
             products: cart,
             totalPrice
