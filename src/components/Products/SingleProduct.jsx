@@ -55,7 +55,7 @@ const SigngleProduct = (props) => {
     },[product])
 
     const notify = (msg) =>{
-        toast(msg);
+        toast.success(msg);
     }
 
     return (

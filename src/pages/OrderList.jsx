@@ -15,7 +15,7 @@ const OrderList = () => {
     return (
         <>
             <Header/>
-            <main className="fs-main-content">
+            <main className="fs-main-content py-5">
                 <div className="container">
                     <div className="order-details">
                         <div className="order-heading">
@@ -33,14 +33,14 @@ const OrderList = () => {
                                 <div className="single-product" key={index}>
                                     <div className="product-info d-flex align-items-center">
                                         <div className="product-image">
-                                            <img src={`images/products/${product.thumbnail}`} alt={product.alt} />
+                                            <img src={`/images/products/${product.thumbnail}`} alt={product.alt} />
                                         </div>
                                         <div className="product-name ms-4">
                                             <h6>{product.name}</h6>
                                         </div>
                                     </div>
                                     <div className="product-meta-data">
-                                        <b>{product.price * product.qty}</b>
+                                        <p><b>&#2547;</b> {product.price * product.qty}</p>
                                         <p><b>Qty:</b> {product.qty}</p>
                                     </div>
                                 </div>

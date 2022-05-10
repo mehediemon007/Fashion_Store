@@ -1745,6 +1745,12 @@ label{
 .order-details .single-product{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 8px 24px;
+}
+
+.order-details .single-product .product-image img{
+  width: 55px;
+  border-radius: 10px;
 }
 
