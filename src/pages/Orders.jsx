@@ -8,8 +8,6 @@ const Orders = () => {
 
     const {orders} = useSelector(state => state.orderInfo);
 
-    console.log(orders)
-
     return (
         <>
             <Header/>
