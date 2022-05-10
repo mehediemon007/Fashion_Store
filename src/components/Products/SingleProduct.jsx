@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {Link} from "react-router-dom"
 import { addToCart, addToWishList, addToCompare } from "../../redux/actions";
 import QuickViewModal from '../widgets/QuickViewModal';
-import {ToastContainer,toast} from 'react-toastify';
+import {toast} from 'react-toastify';
 
 const SigngleProduct = (props) => {
 
@@ -89,7 +89,6 @@ const SigngleProduct = (props) => {
                 </div>
             </div>
             <QuickViewModal product={product} modal={{modal,setModal}}/>
-            <ToastContainer />
         </>
     )
 }
