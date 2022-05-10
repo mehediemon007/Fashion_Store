@@ -4,7 +4,7 @@ import Header from '../components/Header/Header'
 import Footer from '../footer/Footer';
 import { useSelector } from 'react-redux';
 
-const OrderList = () => {
+const SingleOrder = () => {
 
     const {orderId} = useParams();
 
@@ -60,4 +60,4 @@ const OrderList = () => {
     )
 }
 
-export default OrderList
+export default SingleOrder;

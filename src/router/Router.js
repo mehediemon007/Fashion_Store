@@ -10,8 +10,8 @@ import SignUp from '../pages/SignUp';
 import ShopCart from '../pages/ShopCart';
 import SellerChat from '../pages/SellerChat';
 import Orders from '../pages/Orders';
-import OrderList from '../pages/OrderList';
 import OrderTrack from '../pages/OrderTrack';
+import SingleOrder from '../pages/SIngleOrder';
 
 const routes = () => {
     return (
@@ -26,7 +26,7 @@ const routes = () => {
             <Route exact path='/sign-up' element={<SignUp/>}/>
             <Route exact path='/chat' element={<SellerChat/>}/>
             <Route exact path='/orders' element={<Orders/>}/>
-            <Route exact path='/orders/:orderId' element={<OrderList/>}/>
+            <Route exact path='/orders/:orderId' element={<SingleOrder/>}/>
             <Route exact path='/orders/:orderId/track' element={<OrderTrack/>}/>
         </Routes>
     )
