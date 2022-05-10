@@ -83,3 +83,16 @@ export const authInfo = (user) =>{
         user
     }
 }
+
+export const placeOrder = ( cart, totalPrice) =>{
+    return{
+        type: actionTypes.PLACE_ORDER,
+        order:{
+            orderId:"",
+            Invoiced:"",
+            status:"pending",
+            products: cart,
+            totalPrice
+        }
+    }
+}

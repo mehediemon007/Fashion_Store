@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
 import {useSelector, useDispatch} from 'react-redux';
-import {removeFromCart} from "../../redux/actions"
+import {removeFromCart, placeOrder} from "../../redux/actions"
 
 const Mainnav = () => {
 
@@ -99,7 +99,7 @@ const Mainnav = () => {
                                                     <span>${totalPrice}</span>
                                                 </div>
                                                 <Link to="/shopcart" className="view-btn">VIEW CART</Link>
-                                                <Link to="/checkout" className="chechout-btn">CHECK OUT</Link>
+                                                <Link to="/" className="chechout-btn" onClick={()=> dispatch(placeOrder(cart,totalPrice))} >CHECK OUT</Link>
                                             </>
                                         }
                                     </div>

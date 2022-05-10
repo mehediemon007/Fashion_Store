@@ -3,7 +3,7 @@ import Header from '../components/Header/Header';
 import Footer from '../footer/Footer';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { incQty, decQty, removeFromCart} from '../redux/actions';
+import { incQty, decQty, removeFromCart, placeOrder} from '../redux/actions';
 
 const ShopCart = () => {
 
@@ -80,7 +80,7 @@ const ShopCart = () => {
                                                     <input type="text" placeholder='Postal Code / Zip' />
                                                 </div>
                                             </div>
-                                            <button type='submit' className='cart-btn ms-0'><i class="fa-solid fa-shuffle"></i> Update</button>
+                                            <button type='submit' className='cart-btn ms-0'><i className="fa-solid fa-shuffle"></i> Update</button>
                                         </form>
                                     </div>
                                     <div className="shop-coupon">
@@ -94,27 +94,27 @@ const ShopCart = () => {
                                 <div className="col-6 offset-1">
                                     <div className="shopcart-total">
                                         <h4 className='mb-4'>Cart Totals</h4>
-                                        <table class="table table-bordered">
+                                        <table className="table table-bordered">
                                             <tbody>
                                                 <tr>
-                                                    <td class="cart_total_label">Cart Subtotal</td>
-                                                    <td class="cart_total_amount"><span class="font-lg fw-900 text-brand">&#2547; {totalPrice}</span></td>
+                                                    <td className="cart_total_label">Cart Subtotal</td>
+                                                    <td className="cart_total_amount"><span className="font-lg fw-900 text-brand">&#2547; {totalPrice}</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="cart_total_label">Shipping</td>
-                                                    <td class="cart_total_amount"><i class="ti-gift mr-5"></i>Free Shipping</td>
+                                                    <td className="cart_total_label">Shipping</td>
+                                                    <td className="cart_total_amount"><i className="ti-gift mr-5"></i>Free Shipping</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="cart_total_label">Total</td>
-                                                    <td class="cart_total_amount"><strong><span class="font-xl fw-900 text-brand">&#2547; {totalPrice}</span></strong></td>
+                                                    <td className="cart_total_label">Total</td>
+                                                    <td className="cart_total_amount"><strong><span className="font-xl fw-900 text-brand">&#2547; {totalPrice}</span></strong></td>
                                                     </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                     <div className="text-end mt-3">
                                         {cart.length > 0 && <div className='text-end'>
-                                            <Link to="/" className='cart-btn'><i class="fa-solid fa-bag-shopping"></i> Continue Shopping</Link>
-                                            <Link to="/" className='cart-btn'><i className="fa-solid fa-credit-card"></i> Checkout</Link>
+                                            <Link to="/" className='cart-btn'><i className="fa-solid fa-bag-shopping"></i> Continue Shopping</Link>
+                                            <Link to="/" className='cart-btn' onClick={()=> dispatch(placeOrder(cart,totalPrice))}><i className="fa-solid fa-credit-card"></i> Checkout</Link>
                                         </div>}
                                     </div>
                                 </div>
