@@ -1797,21 +1797,26 @@ label{
 .fs-order-track{
   width: 80%;
   margin: 0 auto;
-  padding: 32px;
   border: 1px solid #d3d3d3;
   border-radius: 10px;
   box-shadow: 0px 2px 5px rgb(0 0 0 / 5%);
 }
 
-.order-data{
+.fs-order-track .order-data{
   display: flex;
   justify-content: space-between;
   background-color: var(--primary-color);
+  padding: 24px;
+  border-radius: 10px 10px 0 0;
+}
+
+.fs-order-track .order-data *{
+  color: var(--white-color) !important;
 }
 
 .order-product{
   display: flex;
-  justify-content: space-around;
+  gap: 24px
 }
 
 .order-product .product-image{
@@ -1824,5 +1829,6 @@ label{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 25px;
 }
 

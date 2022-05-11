@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import Header from '../components/Header/Header'
 import Footer from '../footer/Footer';
@@ -6,11 +6,26 @@ import { useSelector } from 'react-redux';
 
 const SingleOrder = () => {
 
+    // const [orderProducts, setOrderProduct] = useState({
+    //     products:[],
+    //     totalPrice:""
+    // })
+
     const {orderId} = useParams();
 
     const {orders} = useSelector(state => state.orderInfo);
 
-    const {products, totalPrice} = orders.find(order => order.orderId == orderId);
+    let {products, totalPrice} = orders.find(order => order.orderId == orderId);
+
+    // useEffect(()=>{
+
+    //     let {products, totalPrice} = orders.find(order => order.orderId == orderId);
+    //     setOrderProduct({
+    //         ...orderProducts,
+    //         products,
+    //         totalPrice
+    //     })
+    // },[])
 
 
     return (
