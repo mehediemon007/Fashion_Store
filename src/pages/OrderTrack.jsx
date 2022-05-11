@@ -33,7 +33,7 @@ const OrderTrack = () => {
     return (
         <>
             <Header/>
-            <main className="fs-main-content">
+            <main className="fs-main-content my-5">
                 <div className="container">
                     <div className="fs-order-track">
                         <div className="order-data">
@@ -54,7 +54,7 @@ const OrderTrack = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="shipping-adrs d-flex flex-column justify-content-between">
+                            <div className="shipping-adrs">
                                 <div className="address">
                                     <h5>Mehedi Hasan Emon</h5>
                                     <p>House 51/C, Road 13/B, Uttara-3 Dhaka.</p>
@@ -62,6 +62,37 @@ const OrderTrack = () => {
                                 <div className="arrive-date">
                                     <p>Arrive On:</p>
                                     <h5>28 April, 2022</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="order-track-sts">
+                            <div className="track">
+                                <div className="step">
+                                    <div className="passed">
+                                        <span className="icon"> <i className="fa fa-check"></i> </span> <span className="text">Order confirmed</span>
+                                    </div> 
+                                </div>
+                                <div className="step">
+                                    <div className="passed">
+                                        <span className="icon"> <i className="fa fa-user"></i> </span> <span className="text"> Picked by courier</span>
+                                    </div>
+                                </div>
+                                <div className="step">
+                                    <div className="active">
+                                        <span className="icon"> <i className="fa fa-truck"></i> </span> <span className="text"> On the way </span>
+                                        <div className="step-details">
+                                            <div className='heading'>
+                                                <i class="fa-solid fa-truck"></i>
+                                                <h5>20 April, 2022</h5>
+                                            </div>
+                                            <p>Packeage arrived at the delivery station Uttara at 12.00 Pm , April 21, 2022</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="step">
+                                    <div className="">
+                                        <span className="icon"> <i className="fa fa-box"></i> </span> <span className="text">Ready for pickup</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
