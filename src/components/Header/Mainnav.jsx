@@ -99,7 +99,7 @@ const Mainnav = () => {
                                                     <span>${totalPrice}</span>
                                                 </div>
                                                 <Link to="/shopcart" className="view-btn">VIEW CART</Link>
-                                                <Link to="/" className="chechout-btn" onClick={()=> dispatch(placeOrder(cart,totalPrice))} >CHECK OUT</Link>
+                                                <Link to="/" className="chechout-btn" onClick={()=> {dispatch(placeOrder(cart,totalPrice)) ; showCart(!openCart)}} >CHECK OUT</Link>
                                             </>
                                         }
                                     </div>
