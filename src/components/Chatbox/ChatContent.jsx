@@ -72,20 +72,21 @@ const ChatContent = () => {
         window.addEventListener("keydown", (e) => {
             if (e.keyCode == 13) {
               if (chatMsgs.msg != "") {
-                chatItms.push({
-                  key: 1,
-                  type: "",
-                  msg: chatMsgs.msg,
-                  image:
-                    "customer.png",
-                });
-                setChatMsgs({ ...chatMsgs, chats: [...chatItms] });
+                const newMsg = {
+                    key: 1,
+                    image: "customer.png",
+                    type: "",
+                    msg: chatMsgs.msg,
+                }
+                setChatMsgs({ chats: [...chatMsgs.chats, newMsg], msg:""});
                 scrollToBottom();
-                setChatMsgs({ ...chatMsgs, msg: "" });
               }
             }
-          });
-          scrollToBottom();
+        });
+
+        scrollToBottom();
+
+        return () => window.removeEventListener("keydown", (e)=>'');
 
     },[chatMsgs])
 
