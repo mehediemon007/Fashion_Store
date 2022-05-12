@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {data} from "../../data/data";
-import SingleProduct from './SingleProduct';
+import SingleFeatureProduct from './SingleFeatureProduct';
 import Slider from "react-slick";
+import QuickViewModal from '../widgets/QuickViewModal';
 
     const FeatureProducts = () => {
+
+        const [modal,setModal] = useState(false);
+        const [viewProduct , setProduct] = useState(null);
 
         const {products} = data;
 
@@ -30,12 +34,13 @@ import Slider from "react-slick";
                         <div className="feature-products">
                             <Slider className='product-slider' {...settings}>
                                 {products.filter(product => product.tag === 'feature').map((product,index) => (
-                                    <SingleProduct value={product} key={index}/>
+                                    <SingleFeatureProduct value={{product, modal , setModal , setProduct}} key={index}/>
                                 ))}
                             </Slider>
                         </div>
                     </div>
                 </div>
+                {modal && <QuickViewModal product={viewProduct} modal={{modal,setModal}}/>}
             </>
         )
     }

@@ -2,18 +2,18 @@ import React,{useState, useRef, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {Link} from "react-router-dom"
 import { addToCart, addToWishList, addToCompare } from "../../redux/actions";
-import QuickViewModal from '../widgets/QuickViewModal';
 import {toast} from 'react-toastify';
 
-const SingleProduct = (props) => {
+const SingleFeatureProduct = (props) => {
 
     let dispatch = useDispatch();
 
-    const product = props.value;
+
+    const {modal, product , setModal , setProduct} = props.value;
 
     const [previewImg , setPreviewImg] = useState("");
     const [selectedThumb, setThumb] = useState("");
-    const [modal,setModal] = useState(false)
+    // const [modal,setModal] = useState(false)
 
     // let thumbImg = useRef([])
     const thumbImg = []; 
@@ -70,7 +70,7 @@ const SingleProduct = (props) => {
                         {product.images.map((img,index)=> <img src={`/images/products/${img}`} alt={product.name} key={index} onClick={()=>handleThumbImage(img,index)} ref={el => thumbImg.push(el)}/>)}
                     </div>
                     <div className="action-btns">
-                        <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); setModal(!modal)}}><i className="fa-solid fa-eye"></i></Link>
+                        <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); setModal(!modal) ; setProduct(product)}}><i className="fa-solid fa-eye"></i></Link>
                         <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToWishList(product)) ; notify("Add To Wishlist!") }}><i className="fa-solid fa-heart"></i></Link>
                         <Link to="" className='action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToCompare(product)); notify("Add To Compare!")}}><i className="fa-solid fa-shuffle"></i></Link>
                     </div>
@@ -88,9 +88,8 @@ const SingleProduct = (props) => {
                     <Link to="" className='add-cart-btn action-btn' onClick={(e)=>{e.preventDefault(); dispatch(addToCart(product)) ; notify("Add To Cart!")}}><i className="fa-solid fa-bag-shopping"></i></Link>
                 </div>
             </div>
-            <QuickViewModal product={product} modal={{modal,setModal}}/>
         </>
     )
 }
 
-export default SingleProduct;
+export default SingleFeatureProduct;
