@@ -2133,3 +2133,16 @@ label{
   background-color: #00dd00;
 }
 
+.content-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.content-body::-webkit-scrollbar-track {
+  background: #d3d3d3; 
+}
+
+.content-body::-webkit-scrollbar-thumb {
+  height: 10px;
+  background: var(--primary-color); 
+}
+
