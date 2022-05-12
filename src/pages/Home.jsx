@@ -4,7 +4,8 @@ import Deals from '../components/Deals/Deals'
 import Header from '../components/Header/Header'
 import HeroSlider from "../components/Hero/HeroSlider"
 import PopularProducts from '../components/PopularProducts/PopularProducts'
-import FeatureProducts from '../components/Products/FeatureProducts'
+import FeatureProducts from '../components/Products/FeatureProducts';
+import Banner from '../components/Banner/Banner'
 import Footer from '../footer/Footer'
 
 function Home() {
@@ -16,6 +17,7 @@ function Home() {
                 <Category/>
                 <Deals/>
                 <FeatureProducts/>
+                <Banner/>
                 <PopularProducts/>
             </main>
             <Footer/>
