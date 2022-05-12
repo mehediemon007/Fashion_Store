@@ -2117,3 +2117,19 @@ label{
   border-radius: 50%;
 }
 
+.isOnline {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #ddd;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.isOnline.active {
+  background-color: #00dd00;
+}
+

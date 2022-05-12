@@ -90,7 +90,7 @@ const ChatContent = () => {
     },[chatMsgs])
 
     const onStateChange = (e) => {
-        setChatMsgs({ msg: e.target.value });
+        setChatMsgs({ ...chatMsgs, msg: e.target.value });
       };
 
 
