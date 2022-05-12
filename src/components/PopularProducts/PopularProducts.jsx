@@ -49,7 +49,7 @@ const PopularProducts = () => {
                         <div className="tab-content popular-products">
                             <div className="row">
                                 {popularProducts.map((product,index) => (
-                                    <div className="col-3" key={index}>
+                                    <div className="col-xl-3 col-lg-4 col-6" key={index}>
                                         <SigngleProduct value={product}/>
                                     </div>
                                 ))}

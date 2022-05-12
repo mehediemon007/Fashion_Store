@@ -1,3 +1,12 @@
+/* Min Width 1400px */
+@media only screen and (min-width:1400px){
+
+    .social-sign{
+        padding-left: 23px;
+    }
+}
+
+/* Min Width 992px */
 @media only screen and (min-width: 992px){
 
     .nav-toggle {
@@ -29,5 +38,28 @@
         height: 50px;
         text-align: center;
         line-height: 50px;
+    }
+}
+
+/* Max Width 1199px */
+
+@media only screen and (max-width:1199px){
+
+    .single-product .product-image-wpr{
+        height: 350px;
+    }
+
+    .product-image-wpr .product-image img{
+        height: 100%;
+    }
+
+    .product-image-wpr .thumbs-img{
+        position: absolute;
+        bottom: 1%;
+    }
+
+    .sign-form{
+        width: 48%;
+        padding: 50px 30px;
     }
 }

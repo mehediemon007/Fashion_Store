@@ -20,7 +20,15 @@ import QuickViewModal from '../widgets/QuickViewModal';
             slidesToShow: 4,
             slidesToScroll: 1,
             centerPadding: "0px",
-            swipe: false
+            swipe: false,
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+            ]
         };
 
         return (
