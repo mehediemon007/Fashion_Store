@@ -163,6 +163,16 @@
 
 }
 
+/* Max Width 480px */
+
+@media only screen and (max-width:480px){
+
+    .nav-right .nav-icon{
+        margin-right: 5px;
+    }
+    
+}
+
 /* Max Width 416px */
 
 @media only screen and (max-width:416px){
@@ -172,4 +182,28 @@
         gap:8px;
     }
 
+    .nav-tabs .nav-link{
+        font-size: 1rem;
+        padding: 5px 4px;
+    }
+
+    .product-review-content .comment-author .comment-thumb{
+        position: relative;
+        margin-bottom: 16px;
+    }
+
+    .product-review-content .comment-author .comment-content{
+        margin-left: 0;
+        padding: 8px;
+    }
+
+}
+
+@media only screen and (max-width:380px){
+
+    .nav-tabs .nav-link{
+        padding: 5px 8px;
+        margin-bottom: 8px;
+    }
+    
 }
