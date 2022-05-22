@@ -395,9 +395,9 @@ label{
 }
 
 .nav-toggle{
-  display: block;
-  font-size: 1.75rem;
-  margin-right: 16px;
+  display: none;
+  font-size: 1.5rem;
+  margin-right: 10px;
   cursor: pointer;
 
 }
@@ -935,8 +935,7 @@ label{
 
 .fs-newsletter .container{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-column-gap: 10px;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
 }
 

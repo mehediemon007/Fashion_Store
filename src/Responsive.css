@@ -9,10 +9,6 @@
 /* Min Width 992px */
 @media only screen and (min-width: 992px){
 
-    .nav-toggle {
-        display: none;
-    }
-
     .nav-search {
         position: relative;
         margin: 0 24px;
@@ -50,7 +46,10 @@
     }
 
     .product-image-wpr .product-image img{
+        width: 100%;
         height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
     .product-image-wpr .thumbs-img{
@@ -62,4 +61,115 @@
         width: 48%;
         padding: 50px 30px;
     }
+}
+
+/* Max Width 991px */
+
+@media only screen and (max-width:991px){
+
+    .main-nav{
+        grid-template-columns: 1fr 50px .8fr;
+    }
+
+    .fs-main-nav.sticky{
+        padding: 16px 0;
+    }
+
+    .nav-search input{
+        position: absolute;
+        display: none;
+        width: 100%;
+        top: 100%;
+        left: 0;
+    }
+
+    .fs-product-menu a{
+        display: inline-block;
+        height: 40px;
+        padding: 0 10px;
+        line-height: 40px;
+    }
+
+    .nav-search-btn{
+        width: 45px;
+        height: 45px;
+        color: var(--primary-color);
+        background-color: var(--light-color);
+        text-align: center;
+        line-height: 45px;
+        border-radius: 5px;
+    }
+
+    .category-list{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .deal-products .single-product{
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+
+    .fs-newsletter .container{
+        grid-template-columns: 1fr;
+        grid-row-gap: 16px;
+    }
+
+}
+
+/* Max Width 767px */
+
+@media only screen and (max-width:767px){
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .fs-product-nav,
+    .fs-toolbar,
+    .nav-user span{
+        display: none;
+    }
+
+    .nav-user{
+        width: 45px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .category-list{
+        grid-template-columns: repeat(3,1fr);
+        gap:14px;
+    }
+
+    .sale-counter{
+        display: grid;
+        grid-template-columns: repeat(4,45px);
+        gap: 10px;
+    }
+
+    .single-counter p:last-child{
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .count-left p{
+        display: none;
+    }
+
+    .subs-form input{
+        margin-bottom: 16px;
+    }
+
+}
+
+/* Max Width 416px */
+
+@media only screen and (max-width:416px){
+    
+    .category-list{
+        grid-template-columns: repeat(2,1fr);
+        gap:8px;
+    }
+
 }

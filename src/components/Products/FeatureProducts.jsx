@@ -28,6 +28,18 @@ import QuickViewModal from '../widgets/QuickViewModal';
                         slidesToShow: 3,
                     }
                 },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 416,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
             ]
         };
 

@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {useSelector, useDispatch} from 'react-redux';
 import {removeFromCart, placeOrder} from "../../redux/actions"
 
-const Mainnav = () => {
+const Mainnav = ({navOpen, setOpen}) => {
 
     const dispatch = useDispatch();
 
@@ -42,9 +42,9 @@ const Mainnav = () => {
             <div className={`fs-main-nav ${stickyClass ? 'sticky' : ''}`}>
                 <div className="container">
                     <div className="main-nav">
-                        <div className="auto">
+                        <div className="col-auto">
                             <div className="fs-logo d-flex align-items-center">
-                                <span className="nav-toggle"><i className="fas fa-bars"></i></span>
+                                <span className="nav-toggle" onClick={()=> setOpen(!navOpen)}><i className="fas fa-bars"></i></span>
                                 <Link to="/"><h2 className='logo'>Fashion Store</h2></Link>
                             </div>
                         </div>
@@ -105,7 +105,7 @@ const Mainnav = () => {
                                     </div>
                                 </div>
                                 <Link to="/sign-up" className="nav-user">
-                                    <i><i className="fa-solid fa-user"></i></i> My Account
+                                    <i className="fa-solid fa-user"></i> <span className='text-white'>My Account</span>
                                 </Link>
                             </div>
                         </div>

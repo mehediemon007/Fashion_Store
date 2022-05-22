@@ -12,15 +12,21 @@ const Newsletter = () => {
                             <p>We’ll never share your email address with a third-party</p>
                         </div>
                     </div>
-                    <form action="" className='subs-form position-relative'>
-                        <input type="email" placeholder='Enter your mail' />
-                        <button type='submit' className='subs-btn'>Subscribe</button>
-                    </form>
-                    <div className="social-links">
-                        <a href="#"><i className="fa-brands fa-facebook-f"></i> Facebook</a>
-                        <a href="#"><i className="fa-brands fa-instagram"></i> Instagram</a>
-                        <a href="#"><i className="fa-brands fa-twitter"></i> Twitter</a>
-                        <a href="#"><i className="fa-brands fa-pinterest-p"></i> Pinterest</a>
+                    <div className='row align-items-center'>
+                        <div className="col-md-6">
+                            <form action="" className='subs-form position-relative'>
+                                <input type="email" placeholder='Enter your mail' />
+                                <button type='submit' className='subs-btn'>Subscribe</button>
+                            </form>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="social-links">
+                                <a href="#" className='ms-0'><i className="fa-brands fa-facebook-f"></i> Facebook</a>
+                                <a href="#"><i className="fa-brands fa-instagram"></i> Instagram</a>
+                                <a href="#"><i className="fa-brands fa-twitter"></i> Twitter</a>
+                                <a href="#"><i className="fa-brands fa-pinterest-p"></i> Pinterest</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

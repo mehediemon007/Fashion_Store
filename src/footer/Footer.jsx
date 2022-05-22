@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="footer-top">
                     <div className="container">
                         <div className="row justify-content-between">
-                        <div className="col-3">
+                        <div className="col-lg-3 col-sm-6">
                             <div className="footer-widget footer-about">
                                 <Link to="/"><h4 className='mb-4'>Fashion Store</h4></Link>
                                 <ul className="contact-list">
@@ -21,7 +21,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-lg-3 col-sm-6">
                             <div className="footer-widget customer-care">
                                 <h5>Customer Care</h5>
                                 <ul className="footer-list">
@@ -32,7 +32,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-lg-3 col-sm-6">
                             <div className="footer-widget footer-category">
                                 <h5>Categories</h5>
                                 <ul className="footer-list">
@@ -43,7 +43,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-lg-3 col-sm-6">
                             <div className="footer-widget footer-gallery">
                                 <h5>Gallery</h5>
                                 <div className="insta-links">
@@ -66,8 +66,8 @@ const Footer = () => {
                 </div>
                 <div className="footer-bottom">
                     <div className="container">
-                        <div className="row text-center">
-                            <p className='text-white'>©2022 React Theme Fashion Shop. All Rights Reserved. Designed by <Link to="/" className='text-white'>Akaarit Ltd.</Link></p>
+                        <div className="row text-sm-center">
+                            <p className='text-white'>©2022 React Theme Fashion Shop. All Rights Reserved by <Link to="/" className='text-white'>Akaarit Ltd.</Link></p>
                         </div>
                     </div>
                 </div>
