@@ -161,6 +161,11 @@
         margin-bottom: 16px;
     }
 
+    .single-product .action-btns{
+        width: 100%;
+        text-align: center;
+    }
+
 }
 
 /* Max Width 480px */
@@ -176,6 +181,35 @@
 /* Max Width 416px */
 
 @media only screen and (max-width:416px){
+
+    .fs-main-nav,
+    .fs-main-nav.sticky{
+        padding: 14px 0;
+    }
+
+    .fs-logo h2{
+        font-size: 1.25rem;
+    }
+
+    .main-nav{
+        grid-template-columns: 1.5fr 30px .5fr;
+    }
+
+    .nav-right .nav-icon,
+    .nav-search-btn,
+    .nav-user{
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        color: var(--primary-color) !important;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .nav-icon .count{
+        top: -10px;
+    }
+
     
     .category-list{
         grid-template-columns: repeat(2,1fr);
