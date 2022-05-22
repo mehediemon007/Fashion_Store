@@ -114,6 +114,16 @@
         grid-row-gap: 16px;
     }
 
+    .sign-form{
+        width: 65%;
+        padding: 40px 24px;
+    }
+
+    .sendNewMessage{
+        width: 70%;
+        left: 30%;
+    }
+
 }
 
 /* Max Width 767px */
@@ -166,6 +176,20 @@
         text-align: center;
     }
 
+    .sign-form{
+        width: 90%;
+    }
+
+    .fs-chatbox{
+        width: 100%;
+        margin: 40px auto 50px;
+    }
+
+    .sendNewMessage{
+        width: 100%;
+        left: 5%;
+    }
+
 }
 
 /* Max Width 480px */
@@ -175,6 +199,7 @@
     .nav-right .nav-icon{
         margin-right: 5px;
     }
+
     
 }
 
@@ -231,6 +256,10 @@
         padding: 8px;
     }
 
+    .main-chatcontent{
+        padding: 16px 10px;
+    }
+
 }
 
 @media only screen and (max-width:380px){
@@ -239,5 +268,31 @@
         padding: 5px 8px;
         margin-bottom: 8px;
     }
+
+    .sign-form{
+        width: 100%;
+        padding: 35px 10px;
+    }
     
+    .social-sign{
+        padding-left: 10px;
+    }
+
+}
+
+@media only screen and (max-width:320px){
+
+    .signed-in{
+        margin-bottom: 8px;
+    }
+
+    .main-chatcontent{
+        padding: 5px;
+    }
+
+    .sendNewMessage{
+        left: 0;
+        padding: 5px;
+    }
+
 }

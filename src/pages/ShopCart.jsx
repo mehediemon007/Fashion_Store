@@ -67,16 +67,16 @@ const ShopCart = () => {
                         </div>
                         <div className="order-totals">
                             <div className="row">
-                                <div className="col-5">
+                                <div className="col-lg-5 col-6">
                                     <div className="shipping">
                                         <h4>Calculate Shipping</h4>
                                         <p className='flat-rate my-3'>Flat Rate: <b>5%</b></p>
                                         <form action="" className='shipping-info'>
                                             <div className="row">
-                                                <div className="col-6">
+                                                <div className="col-md-6">
                                                     <input type="text" placeholder='City' />
                                                 </div>
-                                                <div className="col-6">
+                                                <div className="col-md-6">
                                                     <input type="text" placeholder='Postal Code / Zip' />
                                                 </div>
                                             </div>
@@ -91,7 +91,7 @@ const ShopCart = () => {
                                         </form>
                                     </div>
                                 </div>
-                                <div className="col-6 offset-1">
+                                <div className="col-6 offset-lg-1">
                                     <div className="shopcart-total">
                                         <h4 className='mb-4'>Cart Totals</h4>
                                         <table className="table table-bordered">
@@ -113,7 +113,7 @@ const ShopCart = () => {
                                     </div>
                                     <div className="text-end mt-3">
                                         {cart.length > 0 && <div className='text-end'>
-                                            <Link to="/" className='cart-btn'><i className="fa-solid fa-bag-shopping"></i> Continue Shopping</Link>
+                                            <Link to="/" className='cart-btn mb-2 mb-lg-0'><i className="fa-solid fa-bag-shopping"></i> Continue Shopping</Link>
                                             <Link to="/" className='cart-btn' onClick={()=> dispatch(placeOrder(cart,totalPrice))}><i className="fa-solid fa-credit-card"></i> Checkout</Link>
                                         </div>}
                                     </div>
