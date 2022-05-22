@@ -21,10 +21,10 @@ const Newsletter = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="social-links">
-                                <a href="#" className='ms-0'><i className="fa-brands fa-facebook-f"></i> Facebook</a>
-                                <a href="#"><i className="fa-brands fa-instagram"></i> Instagram</a>
-                                <a href="#"><i className="fa-brands fa-twitter"></i> Twitter</a>
-                                <a href="#"><i className="fa-brands fa-pinterest-p"></i> Pinterest</a>
+                                <a href="https://www.facebook.com/" className='ms-0'><i className="fa-brands fa-facebook-f"></i> Facebook</a>
+                                <a href="https://www.instagram.com/web/lite/"><i className="fa-brands fa-instagram"></i> Instagram</a>
+                                <a href="https://twitter.com/"><i className="fa-brands fa-twitter"></i> Twitter</a>
+                                <a href="https://policy.pinterest.com/en/terms-of-service"><i className="fa-brands fa-pinterest-p"></i> Pinterest</a>
                             </div>
                         </div>
                     </div>
