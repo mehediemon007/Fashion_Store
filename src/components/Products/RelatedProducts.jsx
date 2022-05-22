@@ -16,7 +16,27 @@ const RelatedProducts = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         centerPadding: "0px",
-        swipe: true
+        swipe: true,
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 416,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
     };
 
     return (
