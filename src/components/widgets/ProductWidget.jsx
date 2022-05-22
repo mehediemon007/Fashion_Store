@@ -19,12 +19,12 @@ const ProductWidget = () => {
                     {products.slice(0,3).map(product=>(
                         <div className="single-product">
                             <div className="row align-items-center">
-                                <div className="col-4">
+                                <div className="col-lg-4 col-sm-2 col-3">
                                     <div className="product-image">
                                         <img src={`/images/products/${product.thumbnail}`} alt={product.alt}/>
                                     </div>
                                 </div>
-                                <div className="col-8">
+                                <div className="col-lg-8 col-sm-10 col-9">
                                     <div className="product-content">
                                         <Link to="/product-details"><h6>{product.name}</h6></Link>
                                         <p className='price'>&#2547; {product.price}</p>

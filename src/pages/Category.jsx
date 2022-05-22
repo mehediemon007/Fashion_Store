@@ -34,8 +34,8 @@ const Category = () => {
             <main className="fs-main-content">
                 <div className="fs-category-wpr">
                     <div className="container">
-                        <div className="row">
-                            <div className="col-9">
+                        <div className="row flex-column-reverse flex-lg-row">
+                            <div className="col-lg-9">
                                 <div className="filter-toolbar">
                                     <p>We found <b>16</b> items for you!</p>
                                     <div className="filters">
@@ -64,7 +64,7 @@ const Category = () => {
                                 </div>
                                 <CategoryProducts value={products}/>
                             </div>
-                            <div className="col-3">
+                            <div className="col-lg-3 pt-4 pt-lg-0">
                                 <div className="fs-sidebar-widget">
                                     <CategoryWidget/>
                                     <FilterWidget/>

@@ -9,7 +9,7 @@ const CategoryProducts = ({value: products}) => {
             <div className="fs-category-products">
                 <div className="row">
                     {products.map((product,index) =>(
-                        <div className="col-4" key={index}>
+                        <div className="col-md-4 col-6" key={index}>
                             <SingleProduct value={product}/>
                         </div>
                     ))}

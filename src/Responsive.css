@@ -124,6 +124,12 @@
         left: 30%;
     }
 
+    /* .widget-products .product-image{
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+    } */
+
 }
 
 /* Max Width 767px */
@@ -188,6 +194,13 @@
     .sendNewMessage{
         width: 100%;
         left: 5%;
+    }
+
+    .filter-toolbar{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 20px 8px;
     }
 
 }
