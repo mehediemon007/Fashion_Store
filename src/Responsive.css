@@ -273,6 +273,11 @@
         padding: 16px 10px;
     }
 
+    .filter-toolbar .filters{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
 }
 
 @media only screen and (max-width:380px){
