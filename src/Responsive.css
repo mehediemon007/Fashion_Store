@@ -229,6 +229,7 @@
 	.login-popup .box .form{
 		flex: 0 0 100%;
         max-width: 100%;
+        padding: 10px 24px 16px;
 	}
 }
 
