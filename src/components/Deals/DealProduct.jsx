@@ -13,7 +13,7 @@ const DealProduct = ({product}) => {
                     <Link to={`/product_details/${product.id}`}><img src={`images/products/${product.thumbnail}`} alt={product.alt}/></Link>
                     <span className='tag'>{product.discount}%</span>
                 </div>
-                <div className="product-content px-3">
+                <div className="product-content px-sm-3">
                     <Link to={`/product_details/${product.id}`}><h5>{product.name}</h5></Link>
                     <p className='price'>&#2547; {product.price - ( product.price * product.discount ) / 100 }<del>&#2547; {product.price}</del></p>
                     <div className="sale-count">

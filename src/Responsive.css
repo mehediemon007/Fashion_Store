@@ -213,6 +213,13 @@
         margin-right: 5px;
     }
 
+    .count-num{
+        width: 36px;
+        height: 36px;
+        font-size: .85rem;
+        line-height: 36px;
+    }
+
     
 }
 
@@ -276,6 +283,21 @@
     .filter-toolbar .filters{
         flex-wrap: wrap;
         gap: 10px;
+    }
+
+    .deal-products div[class^=col-],
+    .popular-products div[class^=col-]{
+        width: 100%;
+    }
+
+    /* .sale-counter{
+        display: flex;
+        justify-content: space-around;
+    } */
+
+    .sale-count{
+        display: flex;
+        gap: 16px;
     }
 
 }
