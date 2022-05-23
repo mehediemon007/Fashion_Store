@@ -130,6 +130,14 @@
         overflow: hidden;
     } */
 
+    .quick-view-container{
+        width: 80%;
+    }
+
+    .wish-product{
+        grid-template-columns: 90px max-content;
+    }
+
 }
 
 /* Max Width 767px */
@@ -202,7 +210,6 @@
         gap: 10px;
         margin: 20px 8px;
     }
-
 }
 
 /* Max Width 480px */
@@ -290,11 +297,6 @@
         width: 100%;
     }
 
-    /* .sale-counter{
-        display: flex;
-        justify-content: space-around;
-    } */
-
     .sale-count{
         display: flex;
         gap: 16px;
@@ -316,6 +318,11 @@
     
     .social-sign{
         padding-left: 10px;
+    }
+
+    .quick-view-container{
+        width: 95%;
+        padding: 10px;
     }
 
 }

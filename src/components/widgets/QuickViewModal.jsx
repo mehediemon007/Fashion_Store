@@ -30,10 +30,10 @@ const QuickViewModal = ({product, modal:{modal,setModal}}) => {
                     <span className='modal-close' onClick={()=> setModal(false)}><i className="fa-solid fa-xmark"></i></span>
                     <div className="fs-product-details my-5">
                         <div className="row">
-                            <div className="col-6">
+                            <div className="col-md-6">
                                 <ProductSlider images={product.images}/>
                             </div>
-                            <div className="col-6">
+                            <div className="col-md-6">
                                 <div className="product-content py-4">
                                     <h3 className='mb-3'>{product.name}</h3>
                                     <div className="brand d-flex justify-content-between">

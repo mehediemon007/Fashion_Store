@@ -301,6 +301,10 @@ label{
   text-overflow: ellipsis;
 }
 
+.btn-primary{
+  width: max-content;
+}
+
 
 /* Toolbar */
 
