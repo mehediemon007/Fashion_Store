@@ -210,6 +210,26 @@
         gap: 10px;
         margin: 20px 8px;
     }
+
+    .login-popup .box{
+		width: calc(100% - 30px);
+	}
+
+	.login-popup .box .img-area{
+		max-width: 100%;
+        flex: 0 0 100%;
+        margin-top: 16px;
+	}
+
+    .login-popup .box .img-area .img{
+        position: relative;
+        height: 150px;
+    }
+    
+	.login-popup .box .form{
+		flex: 0 0 100%;
+        max-width: 100%;
+	}
 }
 
 /* Max Width 480px */
