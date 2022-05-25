@@ -4,8 +4,9 @@ import Footer from "../footer/Footer";
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { authInfo } from '../redux/actions';
+import {toast} from 'react-toastify';
 
-const ForgetPass = () => {
+const Newpass = () => {
 
     const dispatch = useDispatch();
 
@@ -26,7 +27,12 @@ const ForgetPass = () => {
     const handleSignUp = (e) =>{
         e.preventDefault();
         // dispatch(authInfo(authData));
-        navigate("/otp")
+        notify("Password Change!")
+        navigate("/")
+    }
+
+    const notify = (msg) =>{
+        toast.success(msg);
     }
 
     return (
@@ -34,15 +40,21 @@ const ForgetPass = () => {
             <Header/>
             <main className="fs-main-content">
                 <div className="container">
-                    <h3 className='sign-head'>Forget Password</h3>
                     <div className='sign-form-wpr'>
                         <div className="sign-form">
+                            <h4 className='sign-head mb-2'>Change Password</h4>
                             <form action="">
                                 <div className="single-input position-relative mb-3">
-                                    <label htmlFor="email">Email/Phone</label>
-                                    <input className='px-3' type="text" id='email' placeholder='Enter Your Email/Phone' value={authData.mail} onChange={(e) => inputChange(e)} name='mail'/>
+                                    <label htmlFor="password">Password</label>
+                                    <input type="password" id='password' placeholder='Enter Password' value={authData.password} onChange={(e) => inputChange(e)} name='password'/>
+                                    <i className="fa-solid fa-lock"></i>
                                 </div>
-                                <button type='submit' className='sign-btn' onClick={(e)=> handleSignUp(e)}>Submit</button>
+                                <div className="single-input position-relative mb-3">
+                                    <label htmlFor="re-password">Re-Password</label>
+                                    <input type="password" id='re-password' placeholder='Enter Re-password' value={authData.password} onChange={(e) => inputChange(e)} name='password'/>
+                                    <i className="fa-solid fa-lock"></i>
+                                </div>
+                                <button type='submit' className='sign-btn' onClick={(e)=> handleSignUp(e)}>Change</button>
                             </form>
                         </div>
                     </div>
@@ -53,4 +65,4 @@ const ForgetPass = () => {
     )
 }
 
-export default ForgetPass
+export default Newpass

@@ -55,7 +55,7 @@ const SignIn = () => {
                                         <input type="checkbox" id='signedIn'/>
                                         <label htmlFor="sigedIn">Keep Me Signed In</label>
                                     </div>
-                                    <Link to="/">Foregt Password?</Link>
+                                    <Link to="/forget-pass">Foregt Password?</Link>
                                 </div>
                                 <button type='submit' className='sign-btn' onClick={(e)=> handleSignUp(e)}>Sign In</button>
                                 <p className='text-center'>New Member? <Link to="/sign-up">Sign Up</Link></p>

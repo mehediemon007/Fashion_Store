@@ -12,6 +12,9 @@ import SellerChat from '../pages/SellerChat';
 import Orders from '../pages/Orders';
 import OrderTrack from '../pages/OrderTrack';
 import SingleOrder from '../pages/SIngleOrder';
+import ForgetPass from '../pages/ForgetPass';
+import OTP from '../pages/OTP';
+import Newpass from '../pages/Newpass';
 
 const Wrapper = ({children}) => {
     const location = useLocation();
@@ -33,6 +36,9 @@ const routes = () => {
                 <Route exact path='/compare-products' element={<Compare/>}/>
                 <Route exact path='/sign-in' element={<SignIn/>}/>
                 <Route exact path='/sign-up' element={<SignUp/>}/>
+                <Route exact path='/forget-pass' element={<ForgetPass/>}/>
+                <Route exact path='/otp' element={<OTP/>}/>
+                <Route exact path='/new-pass' element={<Newpass/>}/>
                 <Route exact path='/chat' element={<SellerChat/>}/>
                 <Route exact path='/orders' element={<Orders/>}/>
                 <Route exact path='/orders/:orderId' element={<SingleOrder/>}/>
