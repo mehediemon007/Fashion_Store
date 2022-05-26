@@ -20,6 +20,15 @@ const authReducer = (state= INITIAL_STATE, action) =>{
                 ...state,
                 password: action.password
             }
+
+        case actionTypes.SHIP_ADDRESS:
+            return{
+                ...state,
+            }
+        case actionTypes.ADD_CARD:
+            return{
+                ...state,
+            }
         default:
             return state
     }

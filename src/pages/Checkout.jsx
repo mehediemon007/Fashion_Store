@@ -51,7 +51,7 @@ const Checkout = () => {
                             <div className="user-delivery-data">
                                 <div className="fs-payments">
                                     <h5>Payment Methods</h5>
-                                    <div className="payments">
+                                    <div className="payments pt-0">
                                         <label htmlFor="paypal"><input type="radio" id="paypal" defaultChecked name='payment'/> <img src="/images/paypal.png" alt="paypal" /></label>
                                         <div className="pay-cards">
                                             <div className='d-flex justify-content-between align-items-center'>

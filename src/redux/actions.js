@@ -105,3 +105,19 @@ export const changePass = (pass) =>{
         password: pass
     }
 }
+
+export const shipAddress = (address) =>{
+
+    return{
+        type: actionTypes.SHIP_ADDRESS,
+        address
+    }
+}
+
+export const addCard = (card) =>{
+
+    return{
+        type: actionTypes.ADD_CARD,
+        card
+    }
+}
