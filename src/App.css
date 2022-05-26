@@ -1625,6 +1625,23 @@ label{
   border-radius: 6px;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  z-index: 1;
+}
+
+/* input[type="date"]:before {
+  background: none;
+  display: block;
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  content: '\f133';
+  position: absolute;
+  top: 40%;
+  left: 10%;
+} */
+
 .single-input label{
   color: var(--primary-color);
   margin-bottom: 8px;
@@ -2301,4 +2318,38 @@ label{
   border-radius: 5px;
   margin-right: 7px;
   padding: 0 10px;
+}
+
+/* Checkout */
+
+.payments,
+.address-form,
+.order-summery{
+  padding: 16px 24px;
+  box-shadow: 0px 10px 30px 0px rgb(2 2 26 / 10%);
+  margin-top: 16px;
+}
+
+.pay-cards,
+.order-summery .order-total{
+  border-top: 1px solid #dedede;
+  padding-top: 16px;
+  margin-top: -8px;
+}
+
+.card-form{
+  margin-top: 10px;
+}
+
+.order-summery{
+  margin-top: 33px;
+}
+
+.order-summery .order-total{
+  margin-top: 16px;
+}
+
+.order-summery .order-total p:last-child{
+  padding-top: 10px;
+  border-top: 1px solid #d3d3d3;
 }

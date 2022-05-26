@@ -18,10 +18,11 @@ const ShopCart = () => {
         cart.forEach(item=> totalPrice+= item.qty * item.price);
         setTotal(totalPrice)
     },[cart])
-
+    
     return (
         <>
             <Header/>
+
             <main className="fs-main-content">
                 <div className="container">
                     <div className="fs-shopcart sec-spacer-50">
