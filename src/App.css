@@ -1649,8 +1649,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .single-input i{
   position: absolute;
-  top: 57%;
-  left: 4%;
+  top: 50px;
+  left: 19px;
 }
 
 .sign-action{

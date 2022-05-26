@@ -9,6 +9,18 @@ const Checkout = () => {
 
     const [totalPrice, setTotal] = useState(0)
 
+    const [shipAdrs, setAdrs] = useState({
+        address:"",
+        zip:"",
+        city:""
+    })
+
+    const [cardData, setcrad] = useState({
+        cardNum:"",
+        cardDate:"",
+        cardPin:""
+    })
+
     const {cart} = useSelector(state => state.cart);
 
     useEffect(()=>{
@@ -16,6 +28,14 @@ const Checkout = () => {
         cart.forEach(item=> totalPrice+= item.qty * item.price);
         setTotal(totalPrice)
     },[cart])
+
+    const handleCard = () =>{
+        
+    }
+
+    const handleAddress = () =>{
+
+    }
     
     const notify = () =>{
         toast.success("Order Placed!!!");
@@ -38,7 +58,7 @@ const Checkout = () => {
                                                 <label htmlFor="card"><input type="radio" id="card" name='payment'/> Credit Crads/ Debit Cards</label>
                                                 <img src="/images/cards.png" alt="cards" />
                                             </div>
-                                            <form action="" className='card-form'>
+                                            <form action="" className='card-form' onSubmit={handleCard}>
                                                 <div className="single-input position-relative mb-3">
                                                     <label htmlFor="card-num">Card Number</label>
                                                     <input type="number" id='card-num' placeholder='0000 0000 0000 00XX' name='cardNum'/>
@@ -67,7 +87,7 @@ const Checkout = () => {
                                 <div className="fs-payments mt-40">
                                     <h5>Delivery Address</h5>
                                     <div className="address">
-                                        <form action="" className='address-form'>
+                                        <form action="" className='address-form' onSubmit={handleAddress}>
                                             <div className="single-input position-relative mb-3">
                                                 <label htmlFor="address">Address</label>
                                                 <input type="text" id='address' placeholder='Enter Address' name='address'/>
