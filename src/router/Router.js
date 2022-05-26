@@ -15,6 +15,7 @@ import SingleOrder from '../pages/SIngleOrder';
 import ForgetPass from '../pages/ForgetPass';
 import OTP from '../pages/OTP';
 import Newpass from '../pages/Newpass';
+import Checkout from '../pages/Checkout';
 
 const Wrapper = ({children}) => {
     const location = useLocation();
@@ -43,6 +44,7 @@ const routes = () => {
                 <Route exact path='/orders' element={<Orders/>}/>
                 <Route exact path='/orders/:orderId' element={<SingleOrder/>}/>
                 <Route exact path='/orders/:orderId/track' element={<OrderTrack/>}/>
+                <Route exact path='/checkout' element={<Checkout/>}/>
             </Routes>
         </Wrapper>
     )

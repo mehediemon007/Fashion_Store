@@ -97,3 +97,11 @@ export const placeOrder = ( cart, totalPrice) =>{
         }
     }
 }
+
+export const changePass = (pass) =>{
+
+    return{
+        type: actionTypes.CHANGE_PASS,
+        password: pass
+    }
+}

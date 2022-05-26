@@ -114,7 +114,7 @@ const ShopCart = () => {
                                     <div className="text-end mt-3">
                                         {cart.length > 0 && <div className='text-end'>
                                             <Link to="/" className='cart-btn mb-2 mb-lg-0'><i className="fa-solid fa-bag-shopping"></i> Continue Shopping</Link>
-                                            <Link to="/" className='cart-btn' onClick={()=> dispatch(placeOrder(cart,totalPrice))}><i className="fa-solid fa-credit-card"></i> Checkout</Link>
+                                            <Link to="/checkout" className='cart-btn' onClick={()=> dispatch(placeOrder(cart,totalPrice))}><i className="fa-solid fa-credit-card"></i> Checkout</Link>
                                         </div>}
                                     </div>
                                 </div>

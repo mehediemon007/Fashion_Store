@@ -8,4 +8,5 @@ export const REMOVE_WISHLIST = 'REMOVE_FROM_WISHLIST';
 export const ADD_TO_COMPARE = 'ADD_TO_COMPARE';
 export const REMOVE_COMPARE = 'REMOVE_FROM_COMPARE';
 export const SIGN_USER = 'SIGN_USER';
+export const CHANGE_PASS = 'CHANGE_PASS';
 export const PLACE_ORDER = 'PLACE_ORDER'

@@ -3,7 +3,7 @@ import Header from "../components/Header/Header"
 import Footer from "../footer/Footer";
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { authInfo } from '../redux/actions';
+import { changePass } from '../redux/actions';
 import {toast} from 'react-toastify';
 
 const Newpass = () => {
@@ -26,7 +26,7 @@ const Newpass = () => {
 
     const handleSignUp = (e) =>{
         e.preventDefault();
-        // dispatch(authInfo(authData));
+        dispatch(changePass(authData.password));
         notify("Password Change!")
         navigate("/")
     }
@@ -51,7 +51,7 @@ const Newpass = () => {
                                 </div>
                                 <div className="single-input position-relative mb-3">
                                     <label htmlFor="re-password">Re-Password</label>
-                                    <input type="password" id='re-password' placeholder='Enter Re-password' value={authData.password} onChange={(e) => inputChange(e)} name='password'/>
+                                    <input type="password" id='re-password' placeholder='Enter Re-password' onChange={(e) => inputChange(e)} name='password'/>
                                     <i className="fa-solid fa-lock"></i>
                                 </div>
                                 <button type='submit' className='sign-btn' onClick={(e)=> handleSignUp(e)}>Change</button>

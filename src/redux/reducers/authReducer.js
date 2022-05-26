@@ -15,6 +15,11 @@ const authReducer = (state= INITIAL_STATE, action) =>{
             return{
                 ...action.user
             }
+        case actionTypes.CHANGE_PASS:
+            return{
+                ...state,
+                password: action.password
+            }
         default:
             return state
     }
