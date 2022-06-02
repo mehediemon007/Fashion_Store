@@ -47,7 +47,7 @@ const Checkout = () => {
             <div className="fs-main-content sec-spacer-50">
                 <div className="container">
                     <div className="row">
-                        <div className="col-6">
+                        <div className="col-md-6">
                             <div className="user-delivery-data">
                                 <div className="fs-payments">
                                     <h5>Payment Methods</h5>
@@ -65,14 +65,14 @@ const Checkout = () => {
                                                     <i className="fa-solid fa-credit-card"></i>
                                                 </div>
                                                 <div className="row">
-                                                    <div className="col-6">
+                                                    <div className="col-sm-6">
                                                         <div className="single-input position-relative mb-3">
                                                             <label htmlFor="card-date">Expire Date</label>
                                                             <input type="date" id='card-date' name='cardDate'/>
                                                             <i className="fa-solid fa-calendar"></i>
                                                         </div>
                                                     </div>
-                                                    <div className="col-6">
+                                                    <div className="col-sm-6">
                                                         <div className="single-input position-relative mb-3">
                                                             <label htmlFor="card-pin">CVC/CVV</label>
                                                             <input type="password" id='card-pin' placeholder='....' name='cardPin'/>
@@ -114,7 +114,7 @@ const Checkout = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-6">
+                        <div className="col-md-6">
                             <div className="order-summery">
                                 <h5>Summery</h5>
                                 <div className="order-total">
