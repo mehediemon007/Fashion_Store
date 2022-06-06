@@ -68,7 +68,7 @@ const ShopCart = () => {
                         </div>
                         <div className="order-totals">
                             <div className="row">
-                                <div className="col-lg-5 col-6">
+                                <div className="col-lg-5 col-md-6">
                                     <div className="shipping">
                                         <h4>Calculate Shipping</h4>
                                         <p className='flat-rate my-3'>Flat Rate: <b>5%</b></p>
@@ -92,7 +92,7 @@ const ShopCart = () => {
                                         </form>
                                     </div>
                                 </div>
-                                <div className="col-6 offset-lg-1">
+                                <div className="col-md-6 offset-lg-1">
                                     <div className="shopcart-total">
                                         <h4 className='mb-4'>Cart Totals</h4>
                                         <table className="table table-bordered">
